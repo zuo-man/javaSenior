@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib22">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.resource.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.annotation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.ejb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.transaction.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.jms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.persistence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.servlet.jsp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/lib/javax.servlet.jsp.jstl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

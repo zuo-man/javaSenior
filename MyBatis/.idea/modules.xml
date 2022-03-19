@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1_demo/1_demo.iml" filepath="$PROJECT_DIR$/1_demo/1_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_request/2_request.iml" filepath="$PROJECT_DIR$/2_request/2_request.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_resultMap/3_resultMap.iml" filepath="$PROJECT_DIR$/3_resultMap/3_resultMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4_MBG/4_MBG.iml" filepath="$PROJECT_DIR$/4_MBG/4_MBG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5_ssm/5_ssm.iml" filepath="$PROJECT_DIR$/5_ssm/5_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyBatis.iml" filepath="$PROJECT_DIR$/MyBatis.iml" />
+    </modules>
+  </component>
+</project>

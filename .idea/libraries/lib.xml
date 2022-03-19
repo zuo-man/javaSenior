@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-aop-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/log4j-api-2.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-core-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-beans-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-tx-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/com.springsource.net.sf.cglib-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-jdbc-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-orm-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/com.springsource.org.aopalliance-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/slf4j-api-1.7.30.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/druid-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-test-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-context-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-expression-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/spring-aspects-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/log4j-slf4j-impl-2.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/mysql-connector-java-8.0.27.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/log4j-core-2.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/JDBC_Transaction/lib/commons-logging-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

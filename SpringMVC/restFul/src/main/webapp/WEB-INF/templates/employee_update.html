@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>修改操作</h1>
+
+<form th:action="@{/employee}" method="post">
+<!--    1.表单form请求为post  2.再设置隐藏域 name必须是_method  3.值为请求方式put-->
+    <input type="hidden" name="_method" value="put">
+
+<!--    设置隐藏域，获取request域中的对象id，用id修改对应员工对象 -->
+    <input type="hidden" name="id" th:value="${employee.id}">
+
+<!--    获取Model请求域中的对象，并回显          field：字段-->
+    lastName：<input type="text" name="lastName" th:value="${employee.lastName}"><br>
+    email：<input type="text" name="email" th:value="${employee.email}"><br>
+    gender：<input type="radio" name="gender" value="1" th:field="${employee.gender}">male
+            <input type="radio" name="gender" value="0" th:field="${employee.gender}">female<br>
+        <input type="submit" value="修改员工"><br>
+</form>
+
+
+</body>
+</html>

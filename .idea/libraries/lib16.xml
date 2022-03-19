@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="lib16">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_Annotation/lib/spring-beans-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_Annotation/lib/spring-core-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_Annotation/lib/spring-context-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_Annotation/lib/spring-expression-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_Annotation/lib/spring-aop-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_Annotation/lib/druid-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_Annotation/lib/commons-logging-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

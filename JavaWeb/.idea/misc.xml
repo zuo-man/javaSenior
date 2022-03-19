@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/05_web" />
+    <file type="web" url="file://$PROJECT_DIR$/06_web" />
+    <file type="web" url="file://$PROJECT_DIR$/07_servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/08_jsp" />
+    <file type="web" url="file://$PROJECT_DIR$/09_EL_JSTL" />
+    <file type="web" url="file://$PROJECT_DIR$/10_Cookie_Session" />
+    <file type="web" url="file://$PROJECT_DIR$/10_tmp" />
+    <file type="web" url="file://$PROJECT_DIR$/11_filter" />
+    <file type="web" url="file://$PROJECT_DIR$/12_json_ajax" />
+    <file type="web" url="file://$PROJECT_DIR$/book" />
+    <file type="web" url="file://$PROJECT_DIR$/demo/xxxxxx" />
+    <file type="web" url="file://$PROJECT_DIR$/Shixun" />
+    <file type="web" url="file://$PROJECT_DIR$/shixun_01" />
+    <file type="web" url="file://$PROJECT_DIR$/ShixunWeb" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/demo/xxxxxx/pom.xml" />
+        <option value="$PROJECT_DIR$/05_web/pom.xml" />
+        <option value="$PROJECT_DIR$/06_web/pom.xml" />
+        <option value="$PROJECT_DIR$/07_servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/book/pom.xml" />
+        <option value="$PROJECT_DIR$/08_jsp/pom.xml" />
+        <option value="$PROJECT_DIR$/09_EL_JSTL/pom.xml" />
+        <option value="$PROJECT_DIR$/10_Cookie_Session/pom.xml" />
+        <option value="$PROJECT_DIR$/10_tmp/pom.xml" />
+        <option value="$PROJECT_DIR$/11_filter/pom.xml" />
+        <option value="$PROJECT_DIR$/12_json_ajax/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

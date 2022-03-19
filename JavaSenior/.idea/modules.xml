@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ba01_Array/Ba01_Array.iml" filepath="$PROJECT_DIR$/Ba01_Array/Ba01_Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ba02_OOP_UP/Ba02_OOP_UP.iml" filepath="$PROJECT_DIR$/Ba02_OOP_UP/Ba02_OOP_UP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ba03_OOP_MID/Ba03_OOP_MID.iml" filepath="$PROJECT_DIR$/Ba03_OOP_MID/Ba03_OOP_MID.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ba04_OOP_DOWN/Ba04_OOP_DOWN.iml" filepath="$PROJECT_DIR$/Ba04_OOP_DOWN/Ba04_OOP_DOWN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ba05_Throw/Ba05_Throw.iml" filepath="$PROJECT_DIR$/Ba05_Throw/Ba05_Throw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/GameFrame/GameFrame.iml" filepath="$PROJECT_DIR$/Project/GameFrame/GameFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaSenior.iml" filepath="$PROJECT_DIR$/JavaSenior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/Project.iml" filepath="$PROJECT_DIR$/Project/Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/Project02/Project02.iml" filepath="$PROJECT_DIR$/Project/Project02/Project02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/ProjectCompany/ProjectCompany.iml" filepath="$PROJECT_DIR$/Project/ProjectCompany/ProjectCompany.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen01_ Multithreading/Sen01_ Multithreading.iml" filepath="$PROJECT_DIR$/Sen01_ Multithreading/Sen01_ Multithreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen02_ CommonClass/Sen02_ CommonClass.iml" filepath="$PROJECT_DIR$/Sen02_ CommonClass/Sen02_ CommonClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen03_Other/Sen03_Other.iml" filepath="$PROJECT_DIR$/Sen03_Other/Sen03_Other.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen04_Collection/Sen04_Collection.iml" filepath="$PROJECT_DIR$/Sen04_Collection/Sen04_Collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen05_IO/Sen05_IO.iml" filepath="$PROJECT_DIR$/Sen05_IO/Sen05_IO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen06_ Reflex/Sen06_ Reflex.iml" filepath="$PROJECT_DIR$/Sen06_ Reflex/Sen06_ Reflex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen07_8NewFeatures/Sen07_8NewFeatures.iml" filepath="$PROJECT_DIR$/Sen07_8NewFeatures/Sen07_8NewFeatures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen08_9NewFeatures/Sen08_9NewFeatures.iml" filepath="$PROJECT_DIR$/Sen08_9NewFeatures/Sen08_9NewFeatures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sen09_10&amp;11NewFeatures/Sen09_10&amp;11NewFeatures.iml" filepath="$PROJECT_DIR$/Sen09_10&amp;11NewFeatures/Sen09_10&amp;11NewFeatures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC/jdbc_1/jdbc_1.iml" filepath="$PROJECT_DIR$/JDBC/jdbc_1/jdbc_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC/jdbc_2/jdbc_2.iml" filepath="$PROJECT_DIR$/JDBC/jdbc_2/jdbc_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC/jdbc_3/jdbc_3.iml" filepath="$PROJECT_DIR$/JDBC/jdbc_3/jdbc_3.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="request_Domain:war">
+    <output-path>$PROJECT_DIR$/request_Domain/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>request_Domain</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="request_Domain-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="request_Domain:war exploded" />
+    </root>
+  </artifact>
+</component>

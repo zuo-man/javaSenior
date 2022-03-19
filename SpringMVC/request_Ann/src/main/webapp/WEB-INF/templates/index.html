@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1>首页</h1>
+<!--<a th:href="@{/hello/testRequestMapping}">测试RequestMapping</a></br>-->
+<a th:href="@{/testRequestMapping}">测试RequestMapping注解的value属性--> /testReuestMapping</a></br>
+
+
+<a th:href="@{/test}">测试RequestMapping注解的value属性--> /test</a></br>
+
+
+<!--<form th:action="@{/test?username='ase'?password=123)}" method="post">-->
+<!--    <input type="submit" value="测试RequestMapping注解的method属性，post请求">-->
+<!--</form>-->
+<!--或者写成：-->
+<form th:action="@{/testPut(username='ase',password=123)}" method="GET">
+    <input type="submit" value="测试RequestMapping注解的method属性，post请求">
+</form>
+
+
+<form th:action="@{/testHeadrs(id=1)}" method="GET">
+    <input type="submit" value="测试RequestMapping注解的headers属性">
+</form>
+
+
+<a th:href="@{/1X1/testAnt}">测试@RequestMapping可以匹配ant风格的路径，使用？*  **</a></br>
+
+<a th:href="@{/testRest/1/小优}">测试@RequestMapping匹配Rest风格的路径，支持路径中的占位符</a></br>
+
+
+<!--映射的请求地址是/test，但是是其他请求，不能匹配@RequestMapping的请求参数，报405请求方式不被支持-->
+<!--默认是GET请求，报405请求方式不被支持 -->
+<form th:action="@{/testPut}" method="put">
+    <input type="submit" value="测试form表单是否能发送put或delete请求">
+</form>
+
+
+
+
+<!--当页面是JSP页面时： contextPath：获取上下文路径 -->
+<!--此方法只能在jsp页面跳转，html中时，会把{}解析成 -> $%7BpageContext.request.contextPath%7D/success，页面不存在404-->
+<a href="${pageContext.request.contextPath}/success">jsp跳转success.jsp</a>
+</body>
+</html>

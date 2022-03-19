@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--提取  再spring配置文件中引入名称空间util-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:util="http://www.springframework.org/schema/util"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <!--1 提取list集合类型属性注入 -->
+    <util:list id="bookList">
+        <value>书</value>
+        <value>数据结构</value>
+        <value>书2</value>
+    </util:list>
+
+    <!--2 提取list集合类型属性注入使用 -->
+    <!-- scope默认值为singleton 表示单实例，   prototype：表示多实例-->
+    <bean id="book" class="com.spring5.collection.Book" scope="prototype">
+        <property name="list" ref="bookList"></property>
+    </bean>
+
+
+</beans>

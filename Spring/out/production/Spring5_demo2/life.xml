@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--提取  再spring配置文件中引入名称空间util-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="orders" class="com.spring5.life.Orders" init-method="initMethod" destroy-method="destroy">
+        <property name="name" value="小优"></property>
+    </bean>
+
+    <!--配置后置处理器，会在当前配置文件中的所有的bean实例都添加后置处理器 -->
+    <bean id="beanPost" class="com.spring5.life.BeanPost"></bean>
+
+</beans>

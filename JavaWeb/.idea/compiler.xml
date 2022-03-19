@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="07_servlet" />
+        <module name="10_Cookie_Session" />
+        <module name="12_json_ajax" />
+        <module name="06_web" />
+        <module name="book" />
+        <module name="10_tmp" />
+        <module name="05_web" />
+        <module name="08_jsp" />
+        <module name="11_filter" />
+        <module name="09_EL_JSTL" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="05_web" target="1.7" />
+      <module name="06_web" target="1.8" />
+      <module name="07_servlet" target="1.8" />
+      <module name="08_jsp" target="1.8" />
+      <module name="09_EL_JSTL" target="1.8" />
+      <module name="10_Cookie_Session" target="1.8" />
+      <module name="10_tmp" target="1.8" />
+      <module name="11_filter" target="1.8" />
+      <module name="12_json_ajax" target="1.8" />
+      <module name="asdf" target="17" />
+      <module name="book" target="10" />
+      <module name="Shixun" target="1.7" />
+      <module name="Shixun_01" target="17" />
+      <module name="shixun_01" target="1.7" />
+      <module name="ShixunWeb" target="1.7" />
+      <module name="xxxxxx" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

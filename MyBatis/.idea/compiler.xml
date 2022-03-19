@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="5_ssm" />
+        <module name="1_demo" />
+        <module name="2_request" />
+        <module name="4_MBG" />
+        <module name="3_resultMap" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="1_demo" target="17" />
+      <module name="2_request" target="17" />
+      <module name="3_resultMap" target="17" />
+      <module name="4_MBG" target="17" />
+      <module name="5_ssm" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="1_demo" options="" />
+      <module name="2_request" options="" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39a94c23-1e63-4274-bc56-8192286a0f11" name="变更" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="mybatis-config.xml" />
+        <option value="Interface" />
+        <option value="mybatis-mapper" />
+        <option value="mybatis-config" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven\myLocalRepository" />
+        <option name="mavenHome" value="E:/maven/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="C:\Users\Dell\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26JnxegYbrUhsycCS2TMVNussCS" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="库" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaSenior\MyBatis\5_ssm\src\main\webapp" />
+      <recent name="D:\javaSenior\MyBatis\4_MBG\src\main\resources" />
+      <recent name="D:\javaSenior\MyBatis\3_resultMap\src\main\resources\com\mybatis\mapper" />
+      <recent name="D:\javaSenior\MyBatis\3_resultMap\src\main\resources" />
+      <recent name="D:\javaSenior\MyBatis\2_request\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaSenior\MyBatis\1_demo\src\main\resources\com\mybatis\xml" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.mybatis.mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mybatis.mapper" />
+      <recent name="com.mybatis.utils" />
+      <recent name="com.mybatis.pojo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SimpleTest.testSim">
+    <configuration name="MBGTest.testMBG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_MBG" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MBGTest" />
+      <option name="METHOD_NAME" value="testMBG" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MBGTest.testMBG_sel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_MBG" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MBGTest" />
+      <option name="METHOD_NAME" value="testMBG_sel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MBGTest.testMBG_upd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_MBG" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MBGTest" />
+      <option name="METHOD_NAME" value="testMBG_upd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageTest.PageHelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_MBG" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PageTest" />
+      <option name="METHOD_NAME" value="PageHelperTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleTest.testSim" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_MBG" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SimpleTest" />
+      <option name="METHOD_NAME" value="testSim" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SimpleTest.testSim" />
+        <item itemvalue="JUnit.PageTest.PageHelperTest" />
+        <item itemvalue="JUnit.MBGTest.testMBG_sel" />
+        <item itemvalue="JUnit.MBGTest.testMBG_upd" />
+        <item itemvalue="JUnit.MBGTest.testMBG" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="39a94c23-1e63-4274-bc56-8192286a0f11" name="变更" comment="" />
+      <created>1647150808273</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647150808273</updated>
+      <workItem from="1647150809852" duration="122000" />
+      <workItem from="1647151002512" duration="1886000" />
+      <workItem from="1647244792091" duration="5889000" />
+      <workItem from="1647253924552" duration="8282000" />
+      <workItem from="1647332391744" duration="194000" />
+      <workItem from="1647341712893" duration="6603000" />
+      <workItem from="1647395036393" duration="6974000" />
+      <workItem from="1647417203563" duration="4961000" />
+      <workItem from="1647427852536" duration="5910000" />
+      <workItem from="1647505667948" duration="3713000" />
+      <workItem from="1647514731788" duration="9524000" />
+      <workItem from="1647577781771" duration="11246000" />
+      <workItem from="1647601772106" duration="463000" />
+      <workItem from="1647665223975" duration="2990000" />
+      <workItem from="1647678467628" duration="96000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

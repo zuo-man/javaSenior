@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="lib14">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JavaSenior/JDBC/jdbc_3/bin/lib/mysql-connector-java-8.0.27.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JavaSenior/JDBC/jdbc_3/bin/lib/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JavaSenior/JDBC/jdbc_3/bin/lib/druid-1.1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JavaSenior/JDBC/jdbc_3/bin/lib/commons-dbcp-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JavaSenior/JDBC/jdbc_3/bin/lib/commons-dbutils-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JavaSenior/JDBC/jdbc_3/bin/lib/commons-pool-1.5.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

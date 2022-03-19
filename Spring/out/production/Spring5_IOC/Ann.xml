@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- 开启组件扫描 -->
+    <!-- 方法一：
+     1.若扫描多个包，多个包用逗号隔开
+     2.扫描包上层目录com.spring5，下层目录都会扫描到
+     -->
+    <context:component-scan base-package="com.spring5"></context:component-scan>
+
+
+    <!--方法二：
+        user-default-filters="false" 表示不使用默认filter，自己配置filter
+        context:include-filter，设置扫描哪些内容
+    -->
+<!--    <context:component-scan base-package="com.spring5" use-default-filters="false">-->
+<!--        &lt;!&ndash; 表示只扫描注解annotation，且只扫描注解为 Controller的注解 &ndash;&gt;-->
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+<!--    </context:component-scan>-->
+
+
+    <!-- 方法三：
+        user-default-filters="false" 表示不使用默认filter，自己配置filter
+        context:exclude-filter，设置哪些内容不进行扫描
+    -->
+<!--    <context:component-scan base-package="com.spring5">-->
+<!--        &lt;!&ndash; 表示只扫描注解，且只扫描除了注解Controller之外的 所有注解 &ndash;&gt;-->
+<!--        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+<!--    </context:component-scan>-->
+
+</beans>

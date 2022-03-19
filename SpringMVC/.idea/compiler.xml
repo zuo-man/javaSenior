@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="request_Ann" />
+        <module name="restFul" />
+        <module name="re_Body" />
+        <module name="springMVC_Ann" />
+        <module name="request_Domain" />
+        <module name="mvc_demo1" />
+        <module name="intercept_Exception" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="intercept_Exception" target="8" />
+      <module name="mvc_demo1" target="8" />
+      <module name="re_Body" target="8" />
+      <module name="request_Ann" target="8" />
+      <module name="request_Domain" target="8" />
+      <module name="restFul" target="8" />
+      <module name="springMVC_Ann" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

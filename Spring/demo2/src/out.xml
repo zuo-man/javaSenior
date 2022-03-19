@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--提取  再spring配置文件中引入名称空间util，   外部引入名称空间context-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/util/spring-context.xsd">
+
+
+
+    <!-- 引入外部属性空间 -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <!--配置外部连接池 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="username" value="prop.user"></property>
+        <property name="password" value="prop.password"></property>
+        <property name="url" value="prop.url"></property>
+        <property name="driverClassName" value="prop.driverClass"></property>
+    </bean>
+
+
+    <!--直接配置连接池 -->
+<!--    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--        <property name="username" value="root"></property>-->
+<!--        <property name="password" value="root"></property>-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/test?rewriteBatchedStatements=true"></property>-->
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>-->
+<!--    </bean>-->
+
+</beans>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3>get：查询</h3>
+<a th:href="@{/user}">查询所有用户信息</a></br>
+<a th:href="@{/user/1}">根据ID查询用户信息</a></br>
+
+<h3>post：添加， 目前位置，能发送post请求的方式只有表单提交post和AJAX</h3>
+<form th:action="@{/user}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <input type="submit" value="添加"><br>
+</form>
+
+
+<h3>put：修改</h3>
+<form th:action="@{/user}" method="post">
+    <input type="hidden" name="_method" value="put">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <input type="submit" value="修改"><br>
+</form>
+
+
+</body>
+</html>

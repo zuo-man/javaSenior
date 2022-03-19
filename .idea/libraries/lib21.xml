@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="lib21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/com.springsource.org.aopalliance-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/spring-core-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/spring-aop-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/spring-expression-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/spring-aspects-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/druid-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/spring-context-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/com.springsource.net.sf.cglib-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/spring-beans-5.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Spring/Spring5_AOP/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

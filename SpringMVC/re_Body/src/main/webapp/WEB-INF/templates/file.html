@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>文件上传 下载</h1>
+
+<a th:href="@{/testDown}">下载12.jpg</a>
+
+<h3>上传不能用GET请求，用POST请求上传    enctype设置为：form-data，文件将以二进制上传</h3>
+<form th:action="@{/testUp}" method="post" enctype="multipart/form-data">
+    头像：<input type="file" name="photo"><br>
+         <input type="submit" value="上传"><br>
+</form>
+
+
+
+
+</body>
+</html>

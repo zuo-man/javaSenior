@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="intercept_Exception:war">
+    <output-path>$PROJECT_DIR$/intercept_Exception/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>intercept_Exception</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="intercept_Exception-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="intercept_Exception:war exploded" />
+    </root>
+  </artifact>
+</component>

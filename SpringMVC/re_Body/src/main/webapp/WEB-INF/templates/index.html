@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>首页</h1>
+
+请求报文由三部分组成：请求头、请求行、请求体   <br>
+而请求体只会再 POST 请求时才会有，请求里边放的就是请求参数    <br>
+
+<h3>测试@RequestBody</h3>
+<form th:action="@{/testRequestBody}" method="post">
+    <input type="text" name="username"><br>
+    <input type="password" name="passowrd"><br>
+    <input type="submit" value="测试@RequestBody"><br>
+</form>
+
+<h3>测试RequestEntiey</h3>
+<form th:action="@{/testRequestEntiey}" method="post">
+    <input type="text" name="username"><br>
+    <input type="password" name="passowrd"><br>
+    <input type="submit" value="测试RequestEntiey"><br>
+</form>
+
+
+<h3>测试servlet源生API 和 @ResponseBody响应浏览器数据</h3>
+<a th:href="@{/testResponse}">通过servlet源生API的response对象响应浏览器数据</a><br>
+
+<!--因为浏览器无法解析java对象，只能解析请求报文信息，所以需要引入json jar包，
+将@ResponseBody中传递过来的java对象转换为浏览器识别的json格式的字符串 -->
+<a th:href="@{/testResponseBody}">通过@ResponseBody响应浏览器数据</a><br>
+
+
+<h3>测试 Ajax </h3>
+<div id="app">
+    <a @click="testAxios" th:href="@{/testAxios}">SpringMVC处理ajax</a>
+</div>
+<script type="text/javascript" th:src="@{/static/js/vue.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/axios.min.js}"></script>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        methods:{
+            testAxios:function (event) {
+                axios({
+                    method:"post",
+                    url:event.target.href,
+                    params:{
+                        username:"admin",
+                        password:"123456"
+                    }
+                }).then(function (response) {
+                    alert(response.data);
+                });
+                event.preventDefault();
+            }
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+<!--当页面是JSP页面时： contextPath：获取上下文路径 -->
+<!--此方法只能在jsp页面跳转，html中时，会把{}解析成 -> $%7BpageContext.request.contextPath%7D/success，页面不存在404-->
+<a href="${pageContext.request.contextPath}/success">jsp跳转success.jsp</a>
+</body>
+</html>
