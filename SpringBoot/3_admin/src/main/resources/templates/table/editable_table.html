@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>Editable Table</title>
+
+
+    <!-- 引入common公共的内容 header -->
+    <!-- include：不保留大标签， 将heard去掉 -->
+    <div th:include="common :: commonheader"> </div>
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- 引入公共的左侧菜单 -->
+    <div th:replace="common :: #leftmeun"></div>
+
+    <!-- main content start-->
+    <div class="main-content" >
+
+
+        <!-- 引入公共的 头信息-->
+        <div th:replace="common :: headermenu"></div>
+
+        <!-- page heading start-->
+        <div class="page-heading">
+            <h3>
+                Editable Table
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Data Table</a>
+                </li>
+                <li class="active"> Editable Table </li>
+            </ul>
+        </div>
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+             <div class="row">
+                <div class="col-sm-12">
+                <section class="panel">
+                <header class="panel-heading">
+                    Editable Table
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                        <a href="javascript:;" class="fa fa-times"></a>
+                     </span>
+                </header>
+                <div class="panel-body">
+                <div class="adv-table editable-table ">
+                <div class="clearfix">
+                    <div class="btn-group">
+                        <!-- last=${page.total + 1} -->
+                        <button id="editable-sample_new" class="btn btn-primary">
+                            Add New <a class="fa fa-plus"  th:href="@{/AddNew(last=${  page.total + 1  })}"></a>
+                        </button>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="#">Print</a></li>
+                            <li><a href="#">Save as PDF</a></li>
+                            <li><a href="#">Export to Excel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space15"></div>
+
+
+                <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>id</th>
+                    <th>姓名</th>
+                    <th>密码</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                    <th>邮箱</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr class="gradeX" th:each="tuser, stats:${page.records}">
+                    <td th:text="${stats.count}">Trident</td>
+                    <td th:text="${tuser.id}"></td>
+                    <td th:text="${tuser.username}"></td>
+                    <td th:text="${tuser.password}"></td>
+                    <td th:text="${tuser.age}"></td>
+                    <td th:text="${tuser.sex}"></td>
+                    <td th:text="${tuser.email}"></td>
+                    <td>
+                            <!-- get请求删除 -->
+<!--                        <a th:href="@{/tuser/delete/{id}(id=${tuser.id}, pn=${page.current})}" class="btn btn-danger btn-sm" type="button">删除</a>-->
+<!--                        <a @click="deleteTuser" th:href="@{/tuser/delete/{id}(id=${tuser.id}, pn=${page.current})}" class="btn btn-danger btn-sm" type="button">删除</a>-->
+
+                        <!--因为超链接只能传GET请求，所以删除操作需要借助form表单-->
+                        <form th:action="@{tuser/delete/{id}(id=${tuser.id}, pn=${page.current})}" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <input type="submit" value="删除">
+                        </form>
+
+                        <a th:href="@{/tuser/UpDate/{id}(id=${tuser.id}, pn=${page.current})}" class="btn btn-danger btn-sm" type="button">修改</a>
+                    </td>
+                </tr>
+
+                </tbody>
+                </table>
+
+
+
+        <!-- 分页功能 -->
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="dataTables_info" id="dynamic-table_info">
+                        当前第[[${page.current}]]页  总计 [[${page.pages}]]页  共[[${page.total}]]条记录
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="dataTables_paginate paging_bootstrap pagination">
+                        <ul>
+                            <!-- 三元运算  若当前页码current 为第一页，则属性改为不可选中   -->
+                            <li th:class="${page.current == 1?'prev disabled':''}"><a th:href="@{/editable_table(pn=${page.current} - 1)}">← 前一页</a></li>
+                            <!-- 三元运算  若当前num等于取出来的当前页 -->
+                            <li th:class="${num == page.current?'active':''}" th:each="num:${#numbers.sequence(1,page.pages)}" >
+                                <!-- 跳转点击页面 -->
+                                <a th:href="@{/editable_table(pn=${num})}">[[${num}]]</a>
+                            </li>
+                            <li th:class="${page.current == page.pages?'prev disabled':''}"><a th:href="@{/editable_table(pn=${page.current} + 1)}">下一页 → </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+                </div>
+                </div>
+                </section>
+                </div>
+                </div>
+        </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <footer>
+            2020 &copy; AdminEx by ThemeBucket </a>
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- 引入common公共的 js -->
+<!-- replace：将公共的div替换，此时都是div，替不替换都一样 -->
+<div th:replace="common :: #commonscript" ></div>
+
+<!--data table-->
+<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+
+
+
+<!--script for editable table-->
+<!-- 以下是用js代码实现分页 -->
+<!--<script src="js/editable-table.js"></script>-->
+
+<!-- END JAVASCRIPTS -->
+<script>
+    jQuery(document).ready(function() {
+        EditableTable.init();
+    });
+</script>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>id</th>
+        <th>姓名</th>
+        <th>密码</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>邮箱</th>
+
+        <th>操作</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr class="gradeX" th:each="health:${page.records}">
+
+        <td th:text="${health.id}"></td>
+        <td th:text="${health.uId}"></td>
+        <td th:text="${health.temperature}"></td>
+        <td th:text="${health.hot}"></td>
+        <td th:text="${health.leaveout}"></td>
+        <td th:text="${health.hesuan}"></td>
+        <td th:text="${health.masknum}"></td>
+        <td th:text="${health.createtime}"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

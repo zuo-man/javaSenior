@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_plus?serverTime=GMT%2B8&characterEncoding=utf-8&userSSL=false
+    username: root
+    password: root
+
+
+mybatis-plus:
+  configuration:
+
+    # 日志功能
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  #自定义功能时，默认是mapper 下的所有xml，名称相同就不用自己配置
+  #mapper-locations:
+
+  #设置 MyBatis-plus 的全局配置
+  global-config:
+    db-config:
+
+      #设置实体类所对应的表的统一前缀   此操作就会让 plus给每一个表名前缀都加上 t_， 就不用加注解@Tablename
+      table-prefix: t_
+
+      #设置统一的主键生成策略
+      id-type: auto
+
+  #设置类型别名所对应的包， mapper.xml的resultType映射才能识别
+  type-aliases-package: com.mybatisplus.pojo
+
+  #扫描通用枚举的包，才能识别
+  type-enums-package: com.mybatisplus.enums

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>t_user 修改页面</h2>
+
+<form th:action="@{/updateTUser(pn=${pn})}" method="post">
+    <!--    1.表单form请求为post  2.再设置隐藏域 name必须是_method  3.值为请求方式put-->
+    <input type="hidden" name="_method" value="put">
+    <!--    设置隐藏域，获取request域中的对象id，用id修改对应员工对象 -->
+    <input type="hidden" name="id" th:value="${tuser.id}">
+    姓名：<input type="text" name="username" th:value="${tuser.username}"><br>
+    密码：<input type="text" name="password" th:value="${tuser.password}"><br>
+    年龄：<input type="text" name="age" th:value="${tuser.age}"><br>
+    性别: <input type="radio" name="sex" value="女" th:value="${tuser.sex}">女
+    <input type="radio" name="sex" value="男" th:value="${tuser.sex}">男<br>
+    邮箱：<input type="text" name="email" th:value="${tuser.email}"><br>
+    <input type="submit" value="修改"><br>
+</form>
+
+
+</body>
+</html>

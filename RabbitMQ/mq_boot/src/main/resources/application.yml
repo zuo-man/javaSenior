@@ -1,0 +1,13 @@
+
+#配置 RabbitMQ  默认端口5672，web可视化端口默认15672
+
+spring:
+  rabbitmq:
+    host: 47.96.175.143
+    port: 5672
+    username: admin
+    password: 123
+
+    publisher-confirm-type: correlated      #开启异步发布确认
+
+    publisher-returns: true           #开启 回退消息  当路由没收到消息时，回退消息给生产者
