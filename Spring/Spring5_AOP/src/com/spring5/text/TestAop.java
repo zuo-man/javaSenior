@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestAop {
 
-    //基于AspectJ注解 Aop
+    //基于Aspect注解 Aop
     @Test
     public void testAop(){
         ApplicationContext context = new ClassPathXmlApplicationContext("aop.xml");

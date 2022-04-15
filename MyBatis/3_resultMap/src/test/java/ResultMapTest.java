@@ -1,8 +1,8 @@
-import com.mybatis.mapper.DeptMapper;
-import com.mybatis.mapper.EmpMapper;
-import com.mybatis.pojo.Dept;
-import com.mybatis.pojo.Emp;
-import com.mybatis.utils.SqlSessionUtils;
+import com.mybais.mapper.DeptMapper;
+import com.mybais.mapper.EmpMapper;
+import com.mybais.pojo.Dept;
+import com.mybais.pojo.Emp;
+import com.mybais.utils.SqlSessionUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 

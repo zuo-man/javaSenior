@@ -10,17 +10,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="mybatis-config.xml" />
-        <option value="Interface" />
-        <option value="mybatis-mapper" />
         <option value="mybatis-config" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="mybatis-mapper" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -31,7 +41,11 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="26JnxegYbrUhsycCS2TMVNussCS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,96 +53,169 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ToolWindow运行.ShowToolbar" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="库" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaSenior\MyBatis\jedis_re\src\main\resources" />
+      <recent name="D:\javaSenior\MyBatis\jedis_re\src\main\java\com\redis\seckall" />
       <recent name="D:\javaSenior\MyBatis\5_ssm\src\main\webapp" />
       <recent name="D:\javaSenior\MyBatis\4_MBG\src\main\resources" />
       <recent name="D:\javaSenior\MyBatis\3_resultMap\src\main\resources\com\mybatis\mapper" />
-      <recent name="D:\javaSenior\MyBatis\3_resultMap\src\main\resources" />
-      <recent name="D:\javaSenior\MyBatis\2_request\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\javaSenior\MyBatis\1_demo\src\main\resources\com\mybatis\xml" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.plus" />
       <recent name="com.mybatis.mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.boot.controller" />
       <recent name="com.mybatis.mapper" />
       <recent name="com.mybatis.utils" />
       <recent name="com.mybatis.pojo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleTest.testSim">
-    <configuration name="MBGTest.testMBG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="4_MBG" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MBGTest" />
-      <option name="METHOD_NAME" value="testMBG" />
+  <component name="RunManager" selected="JUnit.Plus3XApplicationTests.testX2">
+    <configuration name="FastAutoGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.FastAutoGeneratorTest" />
+      <module name="plus_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultipleTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="plus_2_datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.plus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.plus" />
+      <option name="MAIN_CLASS_NAME" value="com.plus.MultipleTest" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MBGTest.testMBG_sel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="4_MBG" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MBGTest" />
-      <option name="METHOD_NAME" value="testMBG_sel" />
+    <configuration name="PageTest.testPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="plus_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.PageTest" />
+      <option name="METHOD_NAME" value="testPage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MBGTest.testMBG_upd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="4_MBG" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MBGTest" />
-      <option name="METHOD_NAME" value="testMBG_upd" />
+    <configuration name="Plus3XApplicationTests.testX1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="plus_3_X" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.plusX.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.plusX" />
+      <option name="MAIN_CLASS_NAME" value="com.plusX.Plus3XApplicationTests" />
+      <option name="METHOD_NAME" value="testX1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PageTest.PageHelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="4_MBG" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PageTest" />
-      <option name="METHOD_NAME" value="PageHelperTest" />
+    <configuration name="Plus3XApplicationTests.testX2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="plus_3_X" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.plusX.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.plusX" />
+      <option name="MAIN_CLASS_NAME" value="com.plusX.Plus3XApplicationTests" />
+      <option name="METHOD_NAME" value="testX2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleTest.testSim" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="4_MBG" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SimpleTest" />
-      <option name="METHOD_NAME" value="testSim" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="Plus1Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="plus_1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybatisplus.Plus1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Plus1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="plus_1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybais.Plus1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Plus2DatasourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="plus_2_datasource" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.plus.Plus2DatasourceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Plus3XApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="plus_3_X" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.plus.Plus3XApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="redis_boot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.boot.RedisBootApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SimpleTest.testSim" />
-        <item itemvalue="JUnit.PageTest.PageHelperTest" />
-        <item itemvalue="JUnit.MBGTest.testMBG_sel" />
-        <item itemvalue="JUnit.MBGTest.testMBG_upd" />
-        <item itemvalue="JUnit.MBGTest.testMBG" />
+        <item itemvalue="JUnit.Plus3XApplicationTests.testX2" />
+        <item itemvalue="JUnit.Plus3XApplicationTests.testX1" />
+        <item itemvalue="JUnit.MultipleTest.test1" />
+        <item itemvalue="应用程序.FastAutoGeneratorTest" />
+        <item itemvalue="JUnit.PageTest.testPage" />
       </list>
     </recent_temporary>
   </component>
@@ -155,6 +242,37 @@
       <workItem from="1647601772106" duration="463000" />
       <workItem from="1647665223975" duration="2990000" />
       <workItem from="1647678467628" duration="96000" />
+      <workItem from="1647754175574" duration="33000" />
+      <workItem from="1647931678811" duration="3987000" />
+      <workItem from="1648281885845" duration="416000" />
+      <workItem from="1648471429335" duration="43000" />
+      <workItem from="1648471783844" duration="25000" />
+      <workItem from="1648476380341" duration="36000" />
+      <workItem from="1648478403024" duration="372000" />
+      <workItem from="1648478807706" duration="27000" />
+      <workItem from="1648553356716" duration="382000" />
+      <workItem from="1648561170303" duration="35000" />
+      <workItem from="1648814651495" duration="6540000" />
+      <workItem from="1648879350037" duration="2714000" />
+      <workItem from="1648884453631" duration="171000" />
+      <workItem from="1648954384608" duration="4330000" />
+      <workItem from="1648960341526" duration="1184000" />
+      <workItem from="1648965357210" duration="1121000" />
+      <workItem from="1649136149232" duration="133000" />
+      <workItem from="1649139621426" duration="538000" />
+      <workItem from="1649164500783" duration="811000" />
+      <workItem from="1649325117447" duration="166000" />
+      <workItem from="1649408840347" duration="150000" />
+      <workItem from="1649410965521" duration="963000" />
+      <workItem from="1649417498621" duration="387000" />
+      <workItem from="1649568056512" duration="478000" />
+      <workItem from="1649574089624" duration="137000" />
+      <workItem from="1649765634145" duration="368000" />
+      <workItem from="1649849867676" duration="7362000" />
+      <workItem from="1649915935602" duration="1350000" />
+      <workItem from="1649917322875" duration="10132000" />
+      <workItem from="1649934101982" duration="11433000" />
+      <workItem from="1649998817717" duration="10285000" />
     </task>
     <servers />
   </component>

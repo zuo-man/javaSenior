@@ -1,6 +1,6 @@
-import com.mybatis.mapper.CacheMapper;
-import com.mybatis.pojo.Emp;
-import com.mybatis.utils.SqlSessionUtils;
+import com.mybais.mapper.CacheMapper;
+import com.mybais.pojo.Emp;
+import com.mybais.utils.SqlSessionUtils;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

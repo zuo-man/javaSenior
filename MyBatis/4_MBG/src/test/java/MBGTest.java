@@ -1,6 +1,6 @@
-import com.mybatis.mapper.EmpMapper;
-import com.mybatis.pojo.Emp;
-import com.mybatis.pojo.EmpExample;
+import com.mybais.mapper.EmpMapper;
+import com.mybais.pojo.Emp;
+import com.mybais.pojo.EmpExample;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

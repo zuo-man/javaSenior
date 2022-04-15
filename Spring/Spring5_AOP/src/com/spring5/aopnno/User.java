@@ -9,6 +9,6 @@ public class User {
     public void add(){
 //        int i = 22/0;
 
-        System.out.println("add...");
+        System.out.println("User 的add方法...");
     }
 }

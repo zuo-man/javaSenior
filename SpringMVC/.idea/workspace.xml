@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="springMVC_Ann:war exploded" />
+      <artifact name="restFul:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -26,6 +26,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Collection.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/request_Ann/src/main/java/com/mvc/bean/User.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/request_Ann/src/main/webapp/WEB-INF/templates/test_param.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/request_Ann/src/main/java/com/mvc/controller/ParamController.java" root0="FORCE_HIGHLIGHTING" />
@@ -56,7 +57,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringBoot" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -65,7 +66,10 @@
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -86,10 +90,11 @@
   </component>
   <component name="RunManager">
     <configuration name="springMVC" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.76" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/restFul/" />
       <deployment>
-        <artifact name="springMVC_Ann:war exploded">
+        <artifact name="restFul:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/springMVC" />
+            <option name="CONTEXT_PATH" value="/restFul" />
           </settings>
         </artifact>
       </deployment>
@@ -103,6 +108,9 @@
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="2866" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="22691" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -120,6 +128,36 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Executor">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -167,7 +205,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="springMVC_Ann:war exploded" />
+          <artifact name="restFul:war exploded" />
         </option>
       </method>
     </configuration>
@@ -210,6 +248,25 @@
       <workItem from="1647311811639" duration="275000" />
       <workItem from="1647666278079" duration="25000" />
       <workItem from="1647678688467" duration="24000" />
+      <workItem from="1647866301394" duration="66000" />
+      <workItem from="1647866572864" duration="165000" />
+      <workItem from="1647929084237" duration="2070000" />
+      <workItem from="1648281563937" duration="165000" />
+      <workItem from="1648356710454" duration="65000" />
+      <workItem from="1648361628001" duration="94000" />
+      <workItem from="1648362126554" duration="67000" />
+      <workItem from="1648362381144" duration="15000" />
+      <workItem from="1648369273312" duration="94000" />
+      <workItem from="1648478789441" duration="12000" />
+      <workItem from="1648556246516" duration="354000" />
+      <workItem from="1648561151521" duration="12000" />
+      <workItem from="1648608441787" duration="2824000" />
+      <workItem from="1648613071749" duration="95000" />
+      <workItem from="1648613372204" duration="482000" />
+      <workItem from="1648614024707" duration="413000" />
+      <workItem from="1648614504555" duration="5000" />
+      <workItem from="1648614567879" duration="127000" />
+      <workItem from="1648619938760" duration="1167000" />
     </task>
     <servers />
   </component>

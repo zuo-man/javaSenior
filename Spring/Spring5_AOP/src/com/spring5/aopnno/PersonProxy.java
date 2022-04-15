@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Order(2)
 public class PersonProxy {
 
-    //后置通知（返回通知）
+    //后置通知（返回通知）    ，对User下的add方法进行增强
     @AfterReturning(value = "execution(* com.spring5.aopnno.User.add(..))")
     public void afterReturning(){
         System.out.println("PersonProxy的 后置通知：afterReturning...");

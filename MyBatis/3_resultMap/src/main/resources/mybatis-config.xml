@@ -18,7 +18,7 @@
 
     <!-- 设置类型别名 -->
     <typeAliases>
-        <package name="com.mybatis.pojo"/>
+        <package name="com.mybais.pojo"/>
     </typeAliases>
 
     <environments default="development">
@@ -34,7 +34,7 @@
     </environments>
     <!--引入映射文件-->
     <mappers>
-        <package name="com.mybatis.mapper"/>
+        <package name="com.mybais.mapper"/>
     </mappers>
 
 </configuration>

@@ -18,7 +18,7 @@ public class UserProxy {
      *  * 表示任意权限修饰符都可以                          * 表示当前路径的全部方法名称都执行
      */
 
-    //相同切入点抽取
+    //相同切入点抽取       ，如下全部通知都是对User下的 add 方法进行增强
     @Pointcut(value = "execution(* com.spring5.aopnno.User.add(..))")
     public void point(){}
 

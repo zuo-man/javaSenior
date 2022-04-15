@@ -10,7 +10,10 @@
         <option value="$PROJECT_DIR$/2_request/pom.xml" />
         <option value="$PROJECT_DIR$/3_resultMap/pom.xml" />
         <option value="$PROJECT_DIR$/4_MBG/pom.xml" />
-        <option value="$PROJECT_DIR$/5_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/jedis_re/pom.xml" />
+        <option value="$PROJECT_DIR$/plus_1/pom.xml" />
+        <option value="$PROJECT_DIR$/plus_2_datasource/pom.xml" />
+        <option value="$PROJECT_DIR$/plus_3_X/pom.xml" />
       </list>
     </option>
   </component>

@@ -8,7 +8,11 @@
 <h1>首页</h1>
 
 <!--超链接请求是GET请求-->
-<a th:href="@{/employee}">查看员工信息</a>
+<a th:href="@{/employee}">查看员工信息</a><br>
+
+<!--当页面是JSP页面时： contextPath：获取上下文路径 -->
+<!--此方法只能在jsp页面跳转，html中时，会把{}解析成 -> $%7BpageContext.request.contextPath%7D/success，页面不存在404-->
+<a href="${pageContext.request.contextPath}/success">jsp跳转success.jsp</a>
 
 
 </body>

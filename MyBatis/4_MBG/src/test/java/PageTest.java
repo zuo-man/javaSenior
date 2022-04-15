@@ -1,8 +1,7 @@
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.mybatis.mapper.EmpMapper;
-import com.mybatis.pojo.Emp;
+import com.mybais.mapper.EmpMapper;
+import com.mybais.pojo.Emp;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

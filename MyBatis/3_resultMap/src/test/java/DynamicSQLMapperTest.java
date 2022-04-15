@@ -1,6 +1,6 @@
-import com.mybatis.mapper.DynamicSQLMapper;
-import com.mybatis.pojo.Emp;
-import com.mybatis.utils.SqlSessionUtils;
+import com.mybais.mapper.DynamicSQLMapper;
+import com.mybais.pojo.Emp;
+import com.mybais.utils.SqlSessionUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 

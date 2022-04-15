@@ -2,12 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="5_ssm" />
+        <module name="plus_2_datasource" />
         <module name="1_demo" />
+        <module name="plus_1" />
+        <module name="plus_3_X" />
+        <module name="jedis_re" />
         <module name="2_request" />
         <module name="4_MBG" />
         <module name="3_resultMap" />
@@ -19,12 +23,21 @@
       <module name="3_resultMap" target="17" />
       <module name="4_MBG" target="17" />
       <module name="5_ssm" target="17" />
+      <module name="jedis_re" target="17" />
+      <module name="plus_1" target="17" />
+      <module name="plus_2_datasource" target="17" />
+      <module name="plus_3_X" target="17" />
+      <module name="redis_boot" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="1_demo" options="" />
       <module name="2_request" options="" />
+      <module name="plus_1" options="-parameters" />
+      <module name="plus_2_datasource" options="-parameters" />
+      <module name="plus_3_X" options="-parameters" />
+      <module name="redis_boot" options="-parameters" />
     </option>
   </component>
 </project>

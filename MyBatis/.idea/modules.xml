@@ -6,8 +6,11 @@
       <module fileurl="file://$PROJECT_DIR$/2_request/2_request.iml" filepath="$PROJECT_DIR$/2_request/2_request.iml" />
       <module fileurl="file://$PROJECT_DIR$/3_resultMap/3_resultMap.iml" filepath="$PROJECT_DIR$/3_resultMap/3_resultMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/4_MBG/4_MBG.iml" filepath="$PROJECT_DIR$/4_MBG/4_MBG.iml" />
-      <module fileurl="file://$PROJECT_DIR$/5_ssm/5_ssm.iml" filepath="$PROJECT_DIR$/5_ssm/5_ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyBatis.iml" filepath="$PROJECT_DIR$/MyBatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jedis_re/jedis_re.iml" filepath="$PROJECT_DIR$/jedis_re/jedis_re.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus_1/plus_1.iml" filepath="$PROJECT_DIR$/plus_1/plus_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus_2_datasource/plus_2_datasource.iml" filepath="$PROJECT_DIR$/plus_2_datasource/plus_2_datasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus_3_X/plus_3_X.iml" filepath="$PROJECT_DIR$/plus_3_X/plus_3_X.iml" />
     </modules>
   </component>
 </project>
