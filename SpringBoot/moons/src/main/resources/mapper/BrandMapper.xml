@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.BrandMapper">
+
+    <resultMap id="BaseResultMap" type="com.shop.pojo.Brand">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="brandname" column="brandname" jdbcType="VARCHAR"/>
+            <result property="logo" column="logo" jdbcType="VARCHAR"/>
+            <result property="site" column="site" jdbcType="VARCHAR"/>
+            <result property="introduce" column="introduce" jdbcType="VARCHAR"/>
+            <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,brandname,logo,
+        site,introduce,deleted
+    </sql>
+
+
+    <select id="selectByBrandname" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from brand
+        where
+        brandname = #{brandname,jdbcType=VARCHAR}
+    </select>
+
+
+</mapper>

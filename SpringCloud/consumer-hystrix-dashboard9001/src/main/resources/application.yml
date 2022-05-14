@@ -1,0 +1,8 @@
+
+server:
+  port: 9001
+
+# 开启，否则hystirx无访问Unable to connect to Command Metric Stream.
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"

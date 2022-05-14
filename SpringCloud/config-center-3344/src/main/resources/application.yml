@@ -1,0 +1,43 @@
+
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  config-center #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/Fuuka1/cloud-config.git
+          ####搜索目录
+          search-paths:
+            - cloud-config  #GitHub上面的git仓库名字
+          default-label: master
+      ####读取分支
+      label: master
+
+
+#RabbitMQ相关配置
+  rabbitmq:
+    host: 47.96.175.143
+    port: 5672
+    username: admin
+    password: 123
+
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+#Rabbitmq相关配置，暴露bus刷新配置端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+#发送 Post "http://localhost:3344/actuator/busrefresh"，就可以使3355，3366动态刷新全局配置
+# .../actuator/busrefresh/config-client:3355   只通知3355，其他不通知

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.shop.pojo.User">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+            <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+            <result property="salt" column="salt" jdbcType="VARCHAR"/>
+            <result property="gmtcreate" column="gmtCreate" jdbcType="VARCHAR"/>
+            <result property="gmtmodified" column="gmtModified" jdbcType="VARCHAR"/>
+            <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!-- sql 片段 -->
+    <sql id="Base_Column_List">
+        id,username,password,
+        role_name,nick_name,
+        salt,gmtCreate,gmtModified
+    </sql>
+
+
+
+    <!-- 自定义查询：根据用户名 密码查询数据 ，且逻辑删除不查询 -->
+    <select id="selectByUsernameAndByPassword" resultType="com.shop.pojo.User">
+        select <include refid="Base_Column_List"></include> from user where username=#{username} and password=#{password} and deleted = 0
+    </select>
+
+    <select id="selectByUsername" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where
+        username = #{username,jdbcType=VARCHAR}
+    </select>
+
+
+    <!-- 自定义分页，连接 "%" 中要用concat拼接，否则控制台输出识别符号错误 -->
+    <!-- 模糊查询，动态SQL，    suffixOverrides/prefixOverrides：将trim标签中内容前面或后面去掉指定内容 -->
+    <select id="selectByUsernameOrByRoleName" resultMap="BaseResultMap">
+        select * from user
+        <trim prefix="where" suffixOverrides="and|or">
+            deleted = 0
+            <if test="username != null and username != '' ">
+                and username like CONCAT("%"#{username}"%")
+            </if>
+            <if test="roleName != null and roleName != '' ">
+                and role_name = #{roleName}
+            </if>
+            order by id desc
+        </trim>
+    </select>
+
+</mapper>

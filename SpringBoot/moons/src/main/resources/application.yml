@@ -1,0 +1,96 @@
+
+#；连接数据库，并改时区
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.96.175.143:3306/shop?serverTime=GMT%2B8&characterEncoding=utf-8&userSSL=false
+    username: root
+    password: root
+
+
+    #starter配置druid，在spring下，所以HikariDataSource的默认连接池失效，访问数据库的连接池现在为 druid
+    druid:
+      aop-patterns: com.shop.*     #springbean监控，监控com.boot包下的所有组件
+      filters: stat, wall, slf4j   #所有开启的功能
+      filter:
+        stat:
+          enabled: true
+          slow-sql-millis: 1000
+          logSlowSql: true
+        wall:
+          enabled: true
+      #          config:
+      #            update-allow: false    #false：更新操作将全部被防火墙拦截
+      #          config:
+      #            drop-table-allow: false   #false：删除表操作全部被防火墙拦截
+
+      stat-view-servlet:        #配置 druid监控页功能
+        enabled: true           #先启动
+        login-username: 123     #设置账号
+        login-password: 123
+        resetEnable: false      #是否有重置按钮
+
+      web-stat-filter:          #监控web项目
+        enabled: true
+        urlPattern: /*            #监控路径，默认写好就是这行
+        exclusions: '*.js, *.gif, *.jpg, *.png, *.css, *.ico, /druid/*'     #排除监控路径，默认写好就是这行
+
+
+  application:
+    name: 123
+
+
+
+
+
+
+  #redis配置
+  redis:
+    host: 47.96.175.143               #Redis 服务器地址
+    port: 6379                        #Redis 服务器连接端口
+    password: root                    #Redis 服务器访问密码
+    database: 1                       #Redis 数据库索引（默认为 0，此处用 1数据库）
+    timeout: 1800000                  #连接超时时间（毫秒）
+
+    client-type: Lettuce              #明确使用jedis或Lettuce连接工厂，默认使用Lettuce，也建议用Lettuce
+    lettuce:
+      pool:
+        max-active: 20                #连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1                  #最大阻塞等待时间(负数表示没限制)
+        max-idle: -1                  #连接池中的最大空闲连接
+        min-idle: 0                   #连接池中的最小空闲连接
+
+
+  #将监控数据发送至指定客户端服务器接受，进行可视化页面展示
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:5001
+#        instance:
+#          name: 沉浸式商城后台监控
+#          prefer-ip: true
+
+
+
+      #指标监控
+#management 是所有actuator的配置
+      #endpoint.端点名.xxx ：对某个端点的具体配置
+management:
+  endpoints:
+    enabled-by-default: true      #默认开启所有监控端点，默认为true
+    web:
+      exposure:
+        include: '*'              #以web方式暴露所有端点
+  endpoint:
+    health:
+      show-details: always        #总是显示详细信息
+
+
+
+
+
+
+
+
+
