@@ -88,6 +88,7 @@ public class WrapperTest {
         //将用户名中包含有 暇 并且（年龄大于 20 或 邮箱为null）的用户信息修改
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         //lambda中的条件优先执行
+        //UPDATE t_user SET user_name=?, email=? WHERE is_deleted=0 AND (user_name LIKE ? AND (age > ? OR email IS NULL))
         wrapper.like("user_name", "暇")
                 .and(i -> i.gt("age", 20).or().isNull("email"));
         User user = new User();

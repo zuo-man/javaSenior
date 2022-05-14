@@ -15,7 +15,7 @@ import java.util.Map;
 public class MyserviceEndPoint {
 
     /**
-     * @ReadOperation ： 是端点的读操作
+     * @ReadOperation ： 端点的读操作
      */
     @ReadOperation
     public Map getDockerInfo(){
@@ -24,7 +24,7 @@ public class MyserviceEndPoint {
     }
 
     /**
-     * @WriteOperation ：是端点的写操作
+     * @WriteOperation ：端点的写操作
      */
     @WriteOperation
     public void stopDocker(){

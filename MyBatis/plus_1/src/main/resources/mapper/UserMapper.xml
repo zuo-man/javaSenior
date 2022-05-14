@@ -6,7 +6,7 @@
 
     <!-- Map<String, Object> selectMapById(Long id); -->
     <select id="selectMapById" resultType="map">
-        select uid,name,age,email from t_user where uid = #{id}
+        select uid,user_name,age,email from t_user where uid = #{id}
     </select>
 
     <!-- 自定义分页 -->

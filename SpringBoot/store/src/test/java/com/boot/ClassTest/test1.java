@@ -3,7 +3,9 @@ package com.boot.ClassTest;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.boot.bean.Class;
+import com.boot.bean.College;
 import com.boot.bean.Health;
+import com.boot.mapper.CollegeMapper;
 import com.boot.service.ClassService;
 import com.boot.service.HealService;
 import com.boot.service.Impl.ClassServiceImpl;
@@ -11,6 +13,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 @Slf4j
 @SpringBootTest
@@ -59,5 +63,16 @@ public class test1 {
         System.out.println(page1);
     }
 
+    @Autowired
+    private CollegeMapper collegeMapper;
+
+
+    @Test
+    public List<College> getAllCollege(){
+
+        List<College> colleges = collegeMapper.selectList(null);
+
+        return colleges;
+    }
 
 }

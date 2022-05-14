@@ -63,11 +63,12 @@ spring:
     admin:
       client:
         url: http://localhost:8081
+        instance:
+          name:
 
 
 
-
-        #指标监控
+          #指标监控
 #management 是所有actuator的配置
           #endpoint.端点名.xxx ：对某个端点的具体配置
 management:
@@ -95,7 +96,6 @@ info:
       query-timeout: 3    # 查询超时属性，3秒
 
 
-#  boot默认使用数据源： 自动配置：HikariDataSource
 
 #配置mybatis规则、使用MyBatisPlus则此项配置无效
 #配置mybatis 规则

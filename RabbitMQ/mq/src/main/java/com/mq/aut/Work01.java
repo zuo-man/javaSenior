@@ -16,7 +16,7 @@ public class Work01 {
         Channel channel = RabbitMqUtils.getCannel();
         System.out.println("C1 等待接受消息处理时间较短");
 
-        DeliverCallback deliverCallback = (consumerTag, message) -> {
+        DeliverCallback deliverCallback = (consum3erTag, message) -> {
             //睡 1秒
             RabbitMqUtils.sleepUtils(1);
             System.out.println("接受的消息 ：" + new String(message.getBody(), "UTF-8"));
