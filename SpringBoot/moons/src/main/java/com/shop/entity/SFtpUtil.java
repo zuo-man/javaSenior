@@ -24,7 +24,7 @@ public class SFtpUtil {
     private static final String SFTP_USERNAME = "root";
     //密码
     private static final String SFTP_PASSWORD = "Fwqlj123";
-    //路径都是/home/加上用户名
+    //路径
     private final String SFTP_BASEPATH = "/usr/local/nginx/html";
 
     //参数传过来了文件、文件的输入流、文件存储路径

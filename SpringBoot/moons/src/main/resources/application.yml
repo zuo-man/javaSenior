@@ -4,7 +4,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.96.175.143:3306/shop?serverTime=GMT%2B8&characterEncoding=utf-8&userSSL=false
+    url: jdbc:mysql://47.96.175.143:3305/shop?serverTime=GMT%2B8&characterEncoding=utf-8&userSSL=false
     username: root
     password: root
 
@@ -43,8 +43,6 @@ spring:
 
 
 
-
-
   #redis配置
   redis:
     host: 47.96.175.143               #Redis 服务器地址
@@ -63,13 +61,13 @@ spring:
 
 
   #将监控数据发送至指定客户端服务器接受，进行可视化页面展示
-#  boot:
-#    admin:
-#      client:
-#        url: http://localhost:5001
-#        instance:
-#          name: 沉浸式商城后台监控
-#          prefer-ip: true
+  boot:
+    admin:
+      client:
+        url: http://47.96.175.143:5001
+        instance:
+          name: 优品惠商城后台监控
+          prefer-ip: true
 
 
 
@@ -87,6 +85,11 @@ management:
       show-details: always        #总是显示详细信息
 
 
+alipay:
+  appId: 2021000120603132
+  appPrivateKey: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCJxQRX82TYUkTseYRIjZpNNkBZr6lNQctSqiHnyXo17YyXxQw2iowMoeG+sNbSNNXI78g6LuH3tMiQzPNVWt5wEXJjzAUjOq0yPVCkmHwYNGJWln8FvSR5O/0J+iD/s03hpe1lPUbQulszwRvH1buV5XfotkkyyOEdCv8tbzP79PsiKhVNbym14OBBRHgmc1EoXwxFJIM1JjjQolPcuot27XU2eOhPmLriQcgXt/5jWSlEJjCDhMeCp4I9SsB+CDvLyTi5+8BfnBnP+cpjjQu0q7t3WRFik7voMSMnBp9YFad2vO9meWEQHByoAkgIa4LEsfkHo0pKkyA18R3wC1YnAgMBAAECggEAeFC41F5ZSZm/W41b+0i+4oNoe2qvPishd9Xgul33/rSwPbL2UYN5f2a4kSI62WUO9uaBRF7BNOSK6/ow3+/1poV2ErWQHw4VR3TIwpXweer1nozb7ZUbD01WVKo+u1BJybBwvCNhftPg5jfVHRYJNoUpzO+0yUcpYYXDCFi/W1907hv96WYwzgnXuk7s7wNZPT+8abjhROYvGPmGpngqEM2ZWAA6zVYvx62TT/jC/ijECa2Psysv4Ztzb1Ft167iLoGpgzU88uyg9L2+LI4+l5IHUfAbPAzcJWzXTtapLaIfErKUp2ltjYc+D3rUfsfUcZ453Otv0++K0BpxawK0AQKBgQDBoIUbtBBF4LaB8h0ReGSSB22FGibo1w49rWe7SK68WrYqd527yldLYIVH7msKH5/WDMbjCNzuhVRXlAohAMEfk0TOvazdwukGb7pcCXeuf/yf6cASEpK12IzydrGsRVeTYQL5xOGgurLuaUHWdG9729yqql00Ds7CTSJ18zAHAQKBgQC2JjS7mVWcwgA3l2WPNpqe9QiQlM3NMHIwlUsKOZMFeBcT5qqjxOHWJErHLvsWY22939AxDiYe8Q3ndRYEq2hctE8Y7KZWhW79gagudcujHhWWAJ/ae3P3bLMLt690EcCtsoLGs7LVrIMLaol/xIpbZ4dUF+uv1+rpH9zUENdFJwKBgE1ms48NfevRFmP/uur+64UMfxVUDPXK8iBpryvItEELKgLz6hPloNu668yDXDqhxa01UlPzeQ3IMp0HyrzCpnDO2BSk8fN8NNaj1yVvi24wL3ZlZKhU0FztAfryw7ePyKBbiWr67w7nUxvG69CknuQuUZnPnI5w1OoLF5l661oBAoGAFnqwl1ZdEnN+w12T0xDSFDv5Sp6Sp3gLH6PNFv3z/wDLGFGnTX7GwD7KW7qYkjLDIGO2tdchLUBijuYMSZc90fMOr+zEunjNMcwGjXVMJF1aHKEHGVeTAD4R+qg4pwJp3QXizdLvhx87LPWA8pu214D3WpF5LMJg41RjVGifqJECgYBtiaAufp7bIF3psYClaEHn5SSv9K4Z9oYAV7VXEzL3EoNzNGrarPmYZ4Icn7ngkZ393UXD3a05jDqxQOU5uLbi2+MhKkdXeqPp3PSGHxrRAxmgsWFz97cXKGE0GvQKQa6hci78HD2A/nyyTNi+rx0pYhkNGED+bN41oQToAum4vQ==
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiD9bj0q+12Vy68k2cwvgimaj3JRSC6jxy6b5zLvNYvilF28sh1ya2Up7LNQN1SvXOBDWT7ClnNoSXPxmB1fC+Lq69rf18qamslEsrj9RcKObuIvKvcYXYl8oti7MMGEc3aYPmuUcSZVCFj0m9GQf/mqZ0mjAw14/8RoLXnJjmoWinog0ahEoUStrgqKTchMnTlRTQHWQadN+uL7/r7FPmpIF2We38RhSto+DbTYlhKRUo9bFuNM/sqXXOGsnOE7grHfLfSUh6TNMSaYMai5cseEZ+5aq1ZQTjk63j+DfIvm+Pz0GrNd6vRZmelQY7Yza8jhhHIZ7h4EC7KK3HkFy/QIDAQAB
+  notifyUrl: http://47.96.175.143:5000/orders/notify
 
 
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.DescsMapper">
+
+    <resultMap id="BaseResultMap" type="com.shop.pojo.Descs">
+            <id property="did" column="did" jdbcType="INTEGER"/>
+            <result property="vid" column="vid" jdbcType="INTEGER"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        did,vid,title,
+        content
+    </sql>
+
+
+    <select id="selectByVid" resultMap="BaseResultMap">
+        select * from descs where vid = #{vid}
+    </select>
+
+    <select id="selectDescsAll" resultMap="BaseResultMap">
+        select * from descs
+    </select>
+
+
+</mapper>

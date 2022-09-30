@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,6 +10,7 @@
         <module name="request_Ann" />
         <module name="restFul" />
         <module name="re_Body" />
+        <module name="sw" />
         <module name="springMVC_Ann" />
         <module name="request_Domain" />
         <module name="mvc_demo1" />
@@ -23,6 +25,7 @@
       <module name="request_Domain" target="8" />
       <module name="restFul" target="8" />
       <module name="springMVC_Ann" target="8" />
+      <module name="sw" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

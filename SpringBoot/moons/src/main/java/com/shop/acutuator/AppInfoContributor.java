@@ -16,7 +16,7 @@ public class AppInfoContributor implements InfoContributor {
     @Override
     public void contribute(Info.Builder builder) {
 
-        builder.withDetail("项目名：", "沉浸时商城")
+        builder.withDetail("项目名：", "优品汇商城")
                 .withDetail("版本号：", "1.0.0");
     }
 }

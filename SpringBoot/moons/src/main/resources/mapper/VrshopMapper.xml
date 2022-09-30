@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.VrshopMapper">
+
+    <resultMap id="BaseResultMap" type="com.shop.pojo.Vrshop">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="imgsrc" column="imgsrc" jdbcType="VARCHAR"/>
+            <result property="stock" column="stock" jdbcType="INTEGER"/>
+            <result property="price" column="price" jdbcType="FLOAT"/>
+            <result property="isput" column="isput" jdbcType="INTEGER"/>
+            <result property="modelpath" column="modelPath" jdbcType="VARCHAR"/>
+            <result property="modelname" column="modelName" jdbcType="VARCHAR"/>
+            <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,title,imgsrc,
+        stock,price,isput,modelPath,
+        modelName,deleted
+    </sql>
+
+
+    <resultMap id="VrshopAndDescResultMap" type="com.shop.pojo.Vrshop">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="imgsrc" column="imgsrc" jdbcType="VARCHAR"/>
+        <result property="stock" column="stock" jdbcType="INTEGER"/>
+        <result property="price" column="price" jdbcType="FLOAT"/>
+        <result property="isput" column="isput" jdbcType="INTEGER"/>
+        <result property="modelpath" column="modelPath" jdbcType="VARCHAR"/>
+        <result property="modelname" column="modelName" jdbcType="VARCHAR"/>
+        <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+        <!--
+              collection：处理一对多的映射关系
+              ofType：表示该属性所对应的集合中存储数据的类型    -->
+        <collection property="descs" ofType="com.shop.pojo.Descs">
+            <id property="did" column="did" jdbcType="INTEGER"/>
+            <id property="vid" column="vid" jdbcType="INTEGER"/>
+            <result property="title" column="d_title" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+
+
+    <select id="selectVrshopAndDesc" resultMap="VrshopAndDescResultMap">
+        select vrshop.*,descs.did,descs.vid,descs.title as d_title,descs.content from vrshop left join
+            descs on vrshop.id = descs.vid where vrshop.id = #{id} and vrshop.deleted = 0
+    </select>
+
+    <!-- 查询所有VR商品 -->
+    <select id="selectVrshopAll" resultMap="VrshopAndDescResultMap">
+        select vrshop.*,descs.did,descs.vid,descs.title as d_title,descs.content from vrshop left join
+            descs on vrshop.id = descs.vid where vrshop.deleted = 0
+    </select>
+    <!-- 查询所有上架 VR商品 -->
+    <select id="selectVrshopPut" resultMap="VrshopAndDescResultMap">
+        select vrshop.*,descs.did,descs.vid,descs.title as d_title,descs.content from vrshop left join
+        descs on vrshop.id = descs.vid where vrshop.deleted = 0 and isput = 0
+    </select>
+
+    <!-- 图表，获取上架商品数 -->
+    <select id="putVrshopTotal" resultType="integer">
+        select count(isput) from vrshop where isput = 0 and deleted = 0
+    </select>
+
+
+
+
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from vrshop
+        where
+        id = #{sid,jdbcType=NUMERIC}
+        AND vrshop.deleted = 0
+    </select>
+
+
+    <select id="selectStockBySId" resultType="integer">
+        select stock from vrshop where id = #{sid,jdbcType=NUMERIC} AND vrshop.deleted = 0
+    </select>
+
+    <update id="updateStock">
+        update vrshop set stock = #{stock} where id = #{sid} AND vrshop.deleted = 0
+    </update>
+
+
+</mapper>

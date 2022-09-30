@@ -1,0 +1,174 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'application'
+}
+
+//引入文件，可以是本地文件地址，也可以是远程网络地址
+/**
+ * apply：map具名参数方式
+ * key：plugin：value插件 id、插件的全类名、插件的简类名
+ */
+apply from :"version.gradle"
+
+task taskVersion{
+    doLast{
+        println "名字为： ${name}, JDK版本为：${cfgs.compileSdkVersion}, 版本号为：${spring.version}"
+    }
+}
+
+
+//指定使用什么版本的JDK语法编译源代码,跟编译环境有关,在有java插件时才能用
+sourceCompatibility = 1.8
+//指定生成特定于某个JDK版本的class文件:跟运行环境有关,在有java插件时才能用
+targetCompatibility = 1.8
+//业务编码字符集,注意这是指定源码解码的字符集[编译器]
+compileJava.options.encoding "UTF-8"
+//测试编码字符集,注意这是指定源码解码的字符集[编译器]
+compileTestJava.options.encoding "UTF-8"
+//编译JAVA文件时采用UTF-8:注意这是指定源码编码的字符集【源文件】
+tasks.withType(JavaCompile) { options.encoding = "UTF-8"
+}
+//编译JAVA文件时采用UTF-8:注意这是指定文档编码的字符集【源文件】
+tasks.withType(Javadoc) { options.encoding = "UTF-8"
+}
+
+group 'com.gra'
+version '1.0-SNAPSHOT'
+
+mainClassName='com.gra.MainClass'   //指定 MainClass主启动类，终端就能 gradle run 启动项目
+
+repositories {
+    mavenCentral()
+}
+
+/**
+ * 依赖方式：
+ *      本地依赖：依赖本地的某个jar包，具体可通过 文件集合、文件数方式指定
+ *      项目依赖：依赖某个project
+ *      直接依赖：依赖的类型 依赖的组名 依赖的名称 依赖的版本号
+ */
+
+dependencies {
+    //本地依赖的方式：文件集合和文件树完成
+    implementation files('lib/mysql.jar', 'lib/log4j.jar')
+    implementation fileTree('dir':'lib', includes: ['*.jar'], excludes: [''])
+    //项目依赖：
+//    implementation project(':subject01')
+    //直接依赖：
+    //简写
+    implementation 'org.apache.logging.log4j:log4j-spring-cloud-config-client:2.17.2'
+    //正常写
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-spring-cloud-config-client', version: '2.17.2'
+
+    //排除jar包中的依赖
+    implementation('org.hibernate:hibernate-core:3.6.3.Final'){
+        exclude group: 'org.slf4j'
+    }
+    //强制使用 特定版本依赖
+    implementation ('org.slf4j:slf4j-api:1.4.0'){
+        version{
+            strictly("1.4.0")
+        }
+    }
+
+
+    implementation 'org.codehaus.groovy:groovy-all:3.0.5'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+//下面我们配置，当 Gradle 构建遇到依赖冲突时，就立即构建失败
+//configurations.all() {
+//    Configuration configuration ->
+////当遇到版本冲突时直接构建失败
+//        configuration.resolutionStrategy.failOnVersionConflict()
+//}
+
+test {
+    useJUnitPlatform()
+}
+
+//也可以写成：
+//task ("task1"){
+//}
+task task1 {
+    //任务的配置段：在配置阶段执行
+    println "这是最简单的任务"
+    //任务的行为：在执行阶段执行，doFirst会在doLast执行之前执行
+    doFirst {
+        println "task 1 doFirst"
+    }
+    doLast {
+        println "task 1 doLast"
+    }
+}
+
+task A{
+    doLast{
+        println "Task"
+    }
+    enabled(false) //直接设置任务开启，默认值为true
+}
+
+task 'B'{
+    group "abc"
+    doLast{
+        println "TaskB.."
+    }
+}
+
+tasks.create('E'){//create方法
+    println "taskE..."
+}
+tasks.register('f'){    //register执行的是延迟创建，也即只有当task被需要使用时才会被创建
+    println "taskF..."
+}
+
+//①.F是任务名，前面通过具名参数给map的属性赋值,以参数方式指定任务的属性信息
+task(group: "GoupAAAAAAAAAAAAAAAAAAAAAAAA",description: "this is task B","F")
+//②.H是任务名，定义任务的同时，在内部直接指定属性信息
+task("H") {
+    group("GoupAAAAAAAAAAAAAAAAAAAAAAAA")
+    description("this is the task H")
+}
+//③.Y是任务名，给已有的任务 在外部直接指定属性信息
+task "y"{}
+y.group="GoupAAAAAAAAAAAAAAAAAAAAAAAA"
+clean.group("GoupAAAAAAAAAAAAAAAAAAAAAAAA") //案例：给已有的clean任务重新指定组信息
+
+
+
+tasks.addRule("任务执行。。。"){
+    String taskName -> task(taskName){
+        println "the $taskName is not exist"
+    }
+}
+
+
+
+//使用本地文件操作方式 创建文件：相对路径
+File configFile=file('src/conf.xml');
+configFile.createNewFile()
+
+
+//使用本地文件操作方式 创建文件：绝对路径
+configFile=file('D:\\conf.xml');
+configFile.createNewFile()
+
+
+def collection = files('src/test1.txt',new File('src/test2.txt'),['src/test3.txt', 'src/test4.txt'])
+collection.forEach(){File it ->
+    it.createNewFile() //创建该文件
+    println it.name //输出文件名
+}
+Set set1 = collection.files // 把文件集合转换为java中的Set类型
+Set set2 = collection as Set
+List list = collection as List// 把文件集合转换为java中的List类型
+for (item in list) {
+    println item.name }
+def union = collection + files('src/test5.txt') // 添加或者删除一个集合
+def minus = collection - files('src/test3.txt')
+union.forEach(){File it ->
+    println it.name
+}

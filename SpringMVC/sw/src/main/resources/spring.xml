@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!-- xml约束：注意这里的写法，不管spring是什么版本，这里都这么些都行 -->
+ 
+	<!-- spring与Spring-MVC的相关设置开始 -->
+	<!-- 开启Spring-MVC注解模式,即可以在Java代码中使用@GetMapping等内容 -->
+	<mvc:annotation-driven >
+		<mvc:message-converters register-defaults="true">
+		
+	          <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	            <property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
+	          </bean>
+	           <bean id="fastJsonHttpMessageConverter"
+		class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>application/json;charset=UTF-8</value>
+				<value>text/html;charset=UTF-8</value><!-- 避免IE出现下载JSON文件的情况 -->
+			</list>
+		</property>	   
+ 	</bean>
+ 
+	   </mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	  
+ 
+	<!--向容器自动注入配置-->
+    <!-- <context:annotation-config /> -->
+	
+	<!--将静态资源交由默认的servlet处理-->
+    <!-- mvc:default-servlet-handler /> -->
+ 
+	
+	<!-- 设置相关的controller位置，用于绑定自定义包名，spring会自动扫描该目录下所有的.java文件 -->
+	<context:component-scan base-package="cn.jju.it.controller" />
+	
+	<!-- 配置视图解析器  默认为jspViewResolver-->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
+	      id="internalResourceViewResolver">     
+        <!-- 后缀 -->
+	    <property name="suffix" value=".jsp" />
+       </bean> 
+	 <!-- spring与Spring-MVC的相关设置结束 -->
+ 
+ <!--=====================分隔线=====================-->
+ 
+	<!-- MyBatis设置开始 -->
+	<!-- 引入数据库属性文件，这里省掉了 -->
+	<!-- <context:property-placeholder location="classpath:db.properties" /> -->
+ 
+   
+    <!--配置数据源 :这里使用的是jdbc BasicDataSource数据源，不推荐使用DriverManagerDataSource -->
+    <bean id="jdbcDataSource" class="com.alibaba.druid.pool.DruidDataSource"  destroy-method="close">
+		<property name="url" value="jdbc:mysql://47.96.175.143:3306/education" />
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
+    </bean>
+    
+ 
+   <!-- 配置sqlSessionFactory 用以产生SqlSession，其中ref=jdbcDataSource对应于上方的 <bean id='jdbcDataSource' -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 数据源 -->
+       		 <property name="dataSource" ref="jdbcDataSource"></property>      
+           <property name="typeAliasesPackage" value="cn.jju.it.model"/>
+           <!-- 指定mapper映射文件位置,映射文件名可以随意定义，建议最好是跟Dao放在一块名称一一对应 -->
+        <property name="mapperLocations" value="classpath:cn/jju/it/mapper/*.xml" />
+        
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+    </bean>
+    
+    <!-- 自动扫描对象关系映射 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--指定会话工厂，如果当前上下文中只定义了一个则该属性可省去 -->
+        <!-- <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property> -->
+        <!-- 设置dao包路径,你可以使用分号或逗号 作为分隔符设置大于一个的包路径 -->
+         <property name="basePackage" value="cn.jju.it.mapper" />
+    </bean>
+ 
+    <!--定义事务管理器，由spring管理数据库操作事务 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="jdbcDataSource"></property>
+    </bean>
+    
+    <!-- 引入swagger配置  -->
+	<bean class="cn.jju.it.config.SwaggerConfig"/>
+	<!--配置swagger资源不被拦截-->
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>
+	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
+	
+    <!--支持注解驱动的事务管理，指定事务管理器 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+	<!-- MyBatis设置结束 -->
+</beans>

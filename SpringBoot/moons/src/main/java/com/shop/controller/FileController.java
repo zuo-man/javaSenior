@@ -3,6 +3,8 @@ package com.shop.controller;
 import com.shop.entity.ReUtil;
 import com.shop.entity.Result;
 import com.shop.entity.SFtpUtil;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,11 +21,13 @@ import java.util.UUID;
  * @createDate 2022-04-24 12:31:41
  */
 
+@Api(tags = "文件上传")
 @CrossOrigin
 @RestController
 @RequestMapping("/file")
 public class FileController {
 
+    @ApiOperation("用户头像上传接口")
     @PostMapping("/fileUser")
     public Result FileUpload(@RequestBody MultipartFile salt) throws Exception{
         //用户 User头像路径
@@ -34,6 +38,7 @@ public class FileController {
         return ReUtil.succ(dataRoute);
     }
 
+    @ApiOperation("商品图片上传接口")
     @PostMapping("/fileShop")
     public Result FileShop(@RequestBody MultipartFile picture) throws Exception{
         //商品 Shop图片路径
@@ -44,6 +49,7 @@ public class FileController {
         return ReUtil.succ(dataRoute);
     }
 
+    @ApiOperation("品牌logo上传接口")
     @PostMapping("/fileBrand")
     public Result FileBrand(@RequestBody MultipartFile logo) throws Exception{
         //品牌 Brandlogo路径

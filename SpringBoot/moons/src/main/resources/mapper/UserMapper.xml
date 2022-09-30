@@ -46,7 +46,7 @@
         <trim prefix="where" suffixOverrides="and|or">
             deleted = 0
             <if test="username != null and username != '' ">
-                and username like CONCAT("%"#{username}"%")
+                and username like CONCAT('%',#{username},'%')
             </if>
             <if test="roleName != null and roleName != '' ">
                 and role_name = #{roleName}

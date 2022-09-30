@@ -8,6 +8,8 @@ import com.shop.entity.ReUtil;
 import com.shop.entity.Result;
 import com.shop.pojo.User;
 import com.shop.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.stereotype.Component;
@@ -30,7 +32,7 @@ import java.util.UUID;
  * @description user CRUD操作
  * @createDate 2022-04-19 15:35:05
  */
-
+@Api(tags = "用户")
 @CrossOrigin
 @RestController
 @RequestMapping("/user")
@@ -39,13 +41,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
+    @ApiOperation("根据ID查询用户")
     @GetMapping("/get/{id}")
     public Result getUserById(@PathVariable("id") Integer id){
         User userByid = userService.getById(id);
         return ReUtil.succ(userByid);
     }
-    //查询用户是否唯一
+    @ApiOperation("查询用户是否唯一")
     @GetMapping("/checkOnly/{username}")
     public Result checkOnly(@PathVariable("username") String username){
 
@@ -58,81 +60,46 @@ public class UserController {
     }
 
 
-    //添加用户
+    @ApiOperation("添加用户")
     @PostMapping("/save")
-    public Result saveUser(
-//                        @RequestParam("username") String username,
-//                         @RequestParam(value = "password", defaultValue = "123") String password,
-//                         @RequestPart("salt") MultipartFile salt,    //头像
-//                         @RequestParam(value = "nickName", defaultValue = "呆唯") String nickName,  //昵称
-//                         @RequestParam(value = "roleName", defaultValue = "用户") String roleName  //角色名称
-//                         @RequestParam("gmtCreate")Date gmtCreate,   //创建时间
-//                         @RequestParam("gmtModified") Date gmtModified  //更新时间
-            @RequestBody HashMap<Object, String> map){
+    public Result saveUser(@RequestBody User user){
 
         //判断用户名是否唯一
-        String username =  map.get("username");
+        String username = user.getUsername();
         User only = userService.getUsername(username);
 
         if(only == null){
-
-//            String password =  map.get("password");
-//            if(password == null){
-//                password = "123456";
-//            }
-//            String nickName =  map.get("nickName");     //昵称
-//            if(nickName == ""){
-//                nickName = "呆唯";
-//            }
-//            String roleName =  map.get("roleName");     //角色名称
-//            if(roleName == ""){
-//                roleName = "用户";
-//            }
-//            String salt = map.get("salt");              //头像相对路径
-
-            String password = ( map.get("password") == "" ) ? "123456" : map.get("password");
-            String nickName = ( map.get("nickName") == "" ) ? "呆唯" : map.get("nickName");
-            String roleName = ( map.get("roleName") == "" ) ? "用户" : map.get("roleName");
-
-            String salt = ( map.get("salt") == "" ) ? "/imps/dev.png" : map.get("salt");//上传的文件为空，使用默认图片呆唯
+            String password = ( user.getPassword() == "" ) ? "123" : user.getPassword();
+            String nickName = ( user.getNickName() == "" ) ? "呆唯" : user.getNickName();
+            String roleName = ( user.getRoleName() == "" ) ? "呆唯" : user.getRoleName();
+            String salt = ( user.getSalt() == "" ) ? "/imps/dev.png" : user.getSalt();
 
             //获取当前时间    2022-04-19 20:54:54
             SimpleDateFormat data = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String gmtCreate = data.format(new Date());
 
-
             //添加新用户，创建更新时间相同
-            User user = new User(null, username, password, roleName, nickName, salt, gmtCreate, gmtCreate,null);
+            user = new User(null, username, password, roleName, nickName, salt, gmtCreate, gmtCreate,null);
             userService.save(user);
 
             return ReUtil.succ(user);
-
-
-
         }else { //用户名已存在
             return new Result(399, null, "用户名已存在", false);
         }
     }
 
 
-    //更新用户信息
+    @ApiOperation("更新用户信息")
     @PutMapping("/update")
-    public Result updateUser(@RequestBody HashMap<Object, String> map){
-
-        Integer id = Integer.valueOf(map.get("id"));
-        String username =  map.get("username");
-        String password =  map.get("password");
-        String salt = map.get("salt");              //头像相对路径
-        String nickName =  map.get("nickName");     //昵称
-        String roleName =  map.get("roleName");     //角色名称
+    public Result updateUser(@RequestBody User user){
 
         //获取当前时间    2022-04-19 20:54:54
         SimpleDateFormat data = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String gmtModified = data.format(new Date());
 
-
         //修改用户  ，创建时间不变，更新时间改变
-        User user = new User(id, username, password, roleName, nickName, salt, null, gmtModified, null);
+        user = new User(user.getId(), user.getUsername(), user.getPassword(), user.getRoleName(),
+                        user.getNickName(), user.getSalt(), null, gmtModified, null);
         userService.updateById(user);
         //UpdateWrapper实现修改，lambda表达式以防写错属性
 //        LambdaUpdateWrapper<User> wrapper = new LambdaUpdateWrapper<>();
@@ -148,16 +115,16 @@ public class UserController {
     }
 
 
-    //根据 ids删除 一个或多个用户
+    @ApiOperation("根据 ids删除 一个或多个用户")
     @DeleteMapping("/remove/{ids}")
-    public Result deleteBatchRemoveUser(@PathVariable("ids") String[] ids){
+    public Result RemoveBatchUser(@PathVariable("ids") String[] ids){
         userService.removeBatchByIds(Arrays.asList(ids));
 
         return ReUtil.succ(null);
     }
 
 
-    //根据用户名，角色名称模糊查询，并返回分页数据
+    @ApiOperation("根据用户名，角色名称模糊查询，并返回分页数据")
     @PostMapping("/selectPage/{page}/{limit}")
     public Result selectPageUser(
                             @PathVariable("page") Integer page,
@@ -181,7 +148,7 @@ public class UserController {
 
 
 
-    //获取用户分页  page：当前页码   limit：每页记录数
+    //@ApiOperation("获取用户分页  page：当前页码   limit：每页记录数")
 //    @GetMapping("/{page}/{limit}")
 //    public Result getUserPage(@PathVariable("page") Integer page,
 //                            @PathVariable("limit") Integer limit){

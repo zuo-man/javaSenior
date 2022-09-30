@@ -23,7 +23,7 @@ public class PaymentService {
      * @HystrixCommand ：标注的方法TimeOut若超时，异常 等错误
      *                  超过 3秒，则执行 TimeoutHandler方法
      *
-     * @HystrixCommand 注解 能对某个一个接口定制 Hystrix的超时时间。
+     * @HystrixProperty 注解 能对某个一个接口定制 Hystrix的超时时间。
      * 通过修改 execution.isolation.thread.timeoutInMilliseconds 属性可以设置超时时间，
      * 通过设置 fallbackMethod 可以设置超时后响应的格式
      */

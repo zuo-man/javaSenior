@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.shop.pojo.Shop;
 import com.shop.service.ShopService;
 import com.shop.mapper.ShopMapper;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,9 +28,61 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements Sh
     }
 
     @Override
+    public List getUnityShop() {
+        return shopMapper.selectUnityShop();
+    }
+
+    @Override
     public List getPut() {
         List list = shopMapper.selectPut();
         return list;
+    }
+
+    @Override
+    public List getTop() {
+        List list = shopMapper.selectTop();
+        return list;
+    }
+
+    @Override
+    public List getSalesAll() {
+        return shopMapper.selectSalesAll();
+    }
+
+    @Override
+    public List getShopNameAll() {
+        return shopMapper.selectShopNameAll();
+    }
+
+    @Override
+    public Integer sumSalesAll() {
+        return shopMapper.sumSalesAll();
+    }
+
+
+    @Override
+    public Integer getStockBySId(Integer sid) {
+        return shopMapper.selectStockBySId(sid);
+    }
+
+    @Override
+    public void updateStock(Integer stock, Integer sid) {
+        shopMapper.updateStock(stock, sid);
+    }
+
+    @Override
+    public Integer getSales(Integer sid) {
+        return shopMapper.selectSales(sid);
+    }
+
+    @Override
+    public void updateSales(Integer sales, Integer sid) {
+        shopMapper.updateSales(sales, sid);
+    }
+
+    @Override
+    public Integer putshopTotal() {
+        return shopMapper.putshopTotal();
     }
 
 }

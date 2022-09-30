@@ -14,16 +14,18 @@
             <result property="type" column="type" jdbcType="VARCHAR"/>
             <result property="stock" column="stock" jdbcType="INTEGER"/>
             <result property="isput" column="isput" jdbcType="INTEGER"/>
+            <result property="istop" column="istop" jdbcType="INTEGER"/>
             <result property="origin" column="origin" jdbcType="VARCHAR"/>
             <result property="brandid" column="brandid" jdbcType="INTEGER"/>
+            <result property="sales" column="sales" jdbcType="INTEGER"/>
             <result property="deleted" column="deleted" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id,shopname,picture1,
         picture2,picture3,price,
-        type,stock,isput,
-        origin,brandid,deleted
+        type,stock,isput,istop
+        origin,brandid,sales,deleted
     </sql>
 
 
@@ -36,18 +38,17 @@
         <trim prefix="where" suffixOverrides="and|or">
             shop.brandid = brand.id and shop.deleted = 0
             <if test="shopname != null and shopname != '' ">
-                and shopname like CONCAT("%"#{shopname}"%")
+                and shopname like CONCAT('%',#{shopname},'%')
             </if>
             <if test="type != null and type != '' ">
-                and type like CONCAT("%"#{type}"%")
+                and type like CONCAT('%',#{type},'%')
             </if>
             <if test="origin != null and origin != '' ">
-                and origin like CONCAT("%"#{origin}"%")
+                and origin like CONCAT('%',#{origin},'%')
             </if>
             <if test="brandname != null and brandname != '' ">
-                and brandname like CONCAT("%"#{brandname}"%")
+                and brandname like CONCAT('%',#{brandname},'%')
             </if>
-
             <if test="isput != null and isput != '' ">
                 and isput = #{isput}
             </if>
@@ -55,12 +56,55 @@
         </trim>
     </select>
 
+    <!-- unity查询所有商品 -->
+    <select id="selectUnityShop" resultType="map">
+        select shop.*, brand.brandname from shop, brand where shop.brandid = brand.id and shop.deleted = 0
+    </select>
+
 
     <!-- 获取已上架商品 -->
     <select id="selectPut" resultType="map">
-        select * from shop where isput = 0
+        select * from shop where isput = 0 and deleted = 0
     </select>
 
+    <!-- 获取首页轮播图商品 -->
+    <select id="selectTop" resultType="map">
+        select * from shop where isput = 0 and deleted = 0 and istop = 0
+    </select>
+
+    <!-- 图表，获取全部销量 -->
+    <select id="selectSalesAll" resultType="object">
+        select sales from shop where deleted = 0
+    </select>
+    <!-- 图表，获取全部商品名 -->
+    <select id="selectShopNameAll" resultType="object">
+        select shopname from shop where deleted = 0
+    </select>
+    <!-- 图表，计算全部销量 -->
+    <select id="sumSalesAll" resultType="integer">
+        select sum(sales) from shop where deleted = 0
+    </select>
+    <!-- 图表，获取上架商品数 -->
+    <select id="putshopTotal" resultType="integer">
+        select count(isput) from shop where isput = 0 and deleted = 0
+    </select>
+
+
+    <select id="selectStockBySId" resultType="integer">
+        select stock from shop where id = #{sid,jdbcType=NUMERIC}
+    </select>
+    <update id="updateStock">
+        update shop set stock = #{stock} where id = #{sid}
+    </update>
+    
+    
+    
+    <select id="selectSales" resultType="integer">
+        select sales from shop where id = #{sid}
+    </select>
+    <update id="updateSales">
+        update shop set sales = #{sales} where id = #{sid}
+    </update>
 
 
 </mapper>

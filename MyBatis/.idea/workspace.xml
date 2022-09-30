@@ -32,6 +32,18 @@
   <component name="JRebelWorkspace">
     <option name="jrebelEnabledAutocompile" value="true" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -61,7 +73,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindow运行.ShowToolbar" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -70,6 +82,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+    <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -96,37 +109,48 @@
       <recent name="com.mybatis.pojo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Plus3XApplicationTests.testX2">
-    <configuration name="FastAutoGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.FastAutoGeneratorTest" />
-      <module name="plus_1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mybatisplus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MultipleTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="plus_2_datasource" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.plus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.plus" />
-      <option name="MAIN_CLASS_NAME" value="com.plus.MultipleTest" />
-      <option name="METHOD_NAME" value="test1" />
+  <component name="RunManager" selected="JUnit.ResultMapTest.testGetDeptAndEmp">
+    <configuration name="ResultMapTest.testGetAllEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="3_resultMap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ResultMapTest" />
+      <option name="METHOD_NAME" value="testGetAllEmp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PageTest.testPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ResultMapTest.testGetDeptAndEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="3_resultMap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ResultMapTest" />
+      <option name="METHOD_NAME" value="testGetDeptAndEmp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResultMapTest.testGetDeptAndEmpGByStep" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="3_resultMap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ResultMapTest" />
+      <option name="METHOD_NAME" value="testGetDeptAndEmpGByStep" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResultMapTest.testGetEmpAndDept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="3_resultMap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ResultMapTest" />
+      <option name="METHOD_NAME" value="testGetEmpAndDept" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WrapperTest.updateTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="plus_1" />
       <extension name="coverage">
         <pattern>
@@ -135,40 +159,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.mybatisplus" />
-      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.PageTest" />
-      <option name="METHOD_NAME" value="testPage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Plus3XApplicationTests.testX1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="plus_3_X" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.plusX.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.plusX" />
-      <option name="MAIN_CLASS_NAME" value="com.plusX.Plus3XApplicationTests" />
-      <option name="METHOD_NAME" value="testX1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Plus3XApplicationTests.testX2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="plus_3_X" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.plusX.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.plusX" />
-      <option name="MAIN_CLASS_NAME" value="com.plusX.Plus3XApplicationTests" />
-      <option name="METHOD_NAME" value="testX2" />
+      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.WrapperTest" />
+      <option name="METHOD_NAME" value="updateTest2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Plus3XApplicationTests.testX2" />
-        <item itemvalue="JUnit.Plus3XApplicationTests.testX1" />
-        <item itemvalue="JUnit.MultipleTest.test1" />
-        <item itemvalue="应用程序.FastAutoGeneratorTest" />
-        <item itemvalue="JUnit.PageTest.testPage" />
+        <item itemvalue="JUnit.ResultMapTest.testGetDeptAndEmp" />
+        <item itemvalue="JUnit.ResultMapTest.testGetDeptAndEmpGByStep" />
+        <item itemvalue="JUnit.ResultMapTest.testGetAllEmp" />
+        <item itemvalue="JUnit.ResultMapTest.testGetEmpAndDept" />
+        <item itemvalue="JUnit.WrapperTest.updateTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -273,6 +265,39 @@
       <workItem from="1649917322875" duration="10132000" />
       <workItem from="1649934101982" duration="11433000" />
       <workItem from="1649998817717" duration="10285000" />
+      <workItem from="1650074668851" duration="1593000" />
+      <workItem from="1650335937789" duration="1004000" />
+      <workItem from="1650337985784" duration="14000" />
+      <workItem from="1650339032615" duration="22000" />
+      <workItem from="1650348899667" duration="53000" />
+      <workItem from="1650349169560" duration="138000" />
+      <workItem from="1650350548835" duration="33000" />
+      <workItem from="1650350740140" duration="76000" />
+      <workItem from="1650353005339" duration="97000" />
+      <workItem from="1650356812365" duration="38000" />
+      <workItem from="1650373098540" duration="44000" />
+      <workItem from="1650423730782" duration="91000" />
+      <workItem from="1650435493519" duration="171000" />
+      <workItem from="1650539650802" duration="155000" />
+      <workItem from="1650540259509" duration="69000" />
+      <workItem from="1650540435128" duration="157000" />
+      <workItem from="1650711564776" duration="140000" />
+      <workItem from="1650714163459" duration="912000" />
+      <workItem from="1650716487906" duration="16000" />
+      <workItem from="1650716986028" duration="354000" />
+      <workItem from="1650717879424" duration="555000" />
+      <workItem from="1650718575985" duration="87000" />
+      <workItem from="1650719380929" duration="692000" />
+      <workItem from="1651049113269" duration="116000" />
+      <workItem from="1651049688632" duration="1565000" />
+      <workItem from="1651151761713" duration="125000" />
+      <workItem from="1652941738583" duration="4145000" />
+      <workItem from="1653311192233" duration="57000" />
+      <workItem from="1653574774874" duration="1188000" />
+      <workItem from="1655019891683" duration="356000" />
+      <workItem from="1658313120429" duration="31000" />
+      <workItem from="1660555799429" duration="1006000" />
+      <workItem from="1664072809305" duration="246000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,7 @@
     <file type="web" url="file://$PROJECT_DIR$/request_Domain" />
     <file type="web" url="file://$PROJECT_DIR$/restFul" />
     <file type="web" url="file://$PROJECT_DIR$/springMVC_Ann" />
+    <file type="web" url="file://$PROJECT_DIR$/sw" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -20,10 +21,14 @@
         <option value="$PROJECT_DIR$/re_Body/pom.xml" />
         <option value="$PROJECT_DIR$/intercept_Exception/pom.xml" />
         <option value="$PROJECT_DIR$/springMVC_Ann/pom.xml" />
+        <option value="$PROJECT_DIR$/sw/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
   </component>
 </project>

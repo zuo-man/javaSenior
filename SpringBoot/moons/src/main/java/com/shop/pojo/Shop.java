@@ -69,6 +69,11 @@ public class Shop implements Serializable {
     private Integer isput;
 
     /**
+     * 首页轮播图  0,上  1,下
+     */
+    private Integer istop;
+
+    /**
      * 产地
      */
     private String origin;
@@ -77,6 +82,11 @@ public class Shop implements Serializable {
      * 对应品牌表的品牌 ID
      */
     private Integer brandid;
+
+    /**
+     * 销量
+     */
+    private Integer sales;
 
     /**
      * 逻辑删除

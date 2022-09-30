@@ -3,6 +3,7 @@ package com.shop.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.shop.pojo.Shop;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,7 +18,24 @@ public interface ShopService extends IService<Shop> {
     Page pageShop(Page page, String shopname, String type, String origin, String  brandname,
                   String isput, String sort);
 
+    List getUnityShop();
+
     //获取上架商品
     List getPut();
+
+    //获取首页轮播图商品
+    List getTop();
+
+    List getSalesAll();
+    List getShopNameAll();
+    Integer sumSalesAll();
+
+    Integer getStockBySId(Integer sid);
+    void updateStock(Integer stock, Integer sid);
+
+    Integer getSales(Integer sid);
+    void updateSales(Integer sales, Integer sid);
+
+    Integer putshopTotal();
 
 }

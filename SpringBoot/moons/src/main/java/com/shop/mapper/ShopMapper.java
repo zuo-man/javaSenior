@@ -5,6 +5,7 @@ import java.util.Map;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.shop.pojo.Shop;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -27,9 +28,34 @@ public interface ShopMapper extends BaseMapper<Shop> {
                        @Param("brandname") String brandname,
                        @Param("isput") String isput, @Param("sort") String sort);
 
+    //unity查询所有商品
+    List selectUnityShop();
+
     //获取上架商品
     List selectPut();
 
+    //获取首页轮播图商品
+    List selectTop();
+
+    //图表，获取全部销量
+    List selectSalesAll();
+    //图表，获取全部商品名
+    List selectShopNameAll();
+    //图表，计算全部销量
+    Integer sumSalesAll();
+
+    //获取库存
+    Integer selectStockBySId(@Param("sid") Integer sid);
+    //减库存
+    void updateStock(@Param("stock") Integer stock, @Param("sid") Integer sid);
+
+    //获取销量
+    Integer selectSales(@Param("sid") Integer sid);
+    //更新销量
+    void updateSales(@Param("sales") Integer sales, @Param("sid") Integer sid);
+
+    //获取上架商品数
+    Integer putshopTotal();
 
 
 }

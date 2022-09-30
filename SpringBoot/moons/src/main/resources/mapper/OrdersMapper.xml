@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.OrdersMapper">
+
+    <resultMap id="BaseResultMap" type="com.shop.pojo.Orders">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="uid" column="uid" jdbcType="INTEGER"/>
+            <result property="user" column="user" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createtime" jdbcType="VARCHAR"/>
+            <result property="paytime" column="paytime" jdbcType="VARCHAR"/>
+            <result property="state" column="state" jdbcType="VARCHAR"/>
+            <result property="total" column="total" jdbcType="FLOAT"/>
+            <result property="payNo" column="pay_no" jdbcType="VARCHAR"/>
+            <result property="isdown" column="isdown" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        id,uid,`user`,createtime,
+        `paytime`,`state`,
+        total,pay_no,isdown
+    </sql>
+
+
+    <resultMap id="OrderAndOrdersFor" type="com.shop.pojo.Orders">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="uid" column="uid" jdbcType="INTEGER"/>
+        <result property="user" column="user" jdbcType="VARCHAR"/>
+        <result property="createtime" column="createtime" jdbcType="VARCHAR"/>
+        <result property="paytime" column="paytime" jdbcType="VARCHAR"/>
+        <result property="state" column="state" jdbcType="VARCHAR"/>
+        <result property="total" column="total" jdbcType="FLOAT"/>
+        <result property="payNo" column="pay_no" jdbcType="VARCHAR"/>
+        <result property="isdown" column="isdown" jdbcType="INTEGER"/>
+
+        <collection property="ordersfor" ofType="com.shop.pojo.Ordersfor">
+            <result property="oid" column="oid" jdbcType="INTEGER"/>
+            <result property="sid" column="sid" jdbcType="INTEGER"/>
+            <result property="shopname" column="shopname" jdbcType="VARCHAR"/>
+            <result property="picture" column="picture" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="FLOAT"/>
+            <result property="osum" column="osum" jdbcType="INTEGER"/>
+        </collection>
+    </resultMap>
+
+
+
+    <!-- 模糊查询订单 -->
+    <select id="selectOrders" resultMap="OrderAndOrdersFor">
+        select orders.*, ordersfor.* from orders,ordersfor
+        <trim prefix="where" suffixOverrides="and|or">
+            orders.id = ordersfor.oid
+            <if test="user != null and user != '' ">
+                and `user` like CONCAT('%',#{user},'%')
+            </if>
+            <if test="state != null and state != '' ">
+                and `state` like CONCAT('%',#{state},'%')
+            </if>
+            <if test="isdown != null and isdown != '' ">
+                and isdown = #{isdown}
+            </if>
+            order by createtime desc
+        </trim>
+    </select>
+
+
+    <select id="selectByUid" resultMap="OrderAndOrdersFor">
+        select orders.*, ordersfor.* from orders, ordersfor where
+        orders.id = ordersfor.oid AND orders.uid = #{uid} order by createtime desc
+    </select>
+
+
+    <!-- 图表，获取全部销售额 -->
+    <select id="selectTotalAll" resultType="object">
+        select total from orders where state like '已支付'
+    </select>
+    <!-- 图表，计算销售额 -->
+    <select id="sumTotalAll" resultType="integer">
+        select sum(total) from orders where state like '已支付'
+    </select>
+    <!-- 图表，获取成交时间 -->
+    <select id="selectCreateAll" resultType="object">
+        select createtime from orders where state like '已支付'
+    </select>
+    <!-- 图表，支付笔数 -->
+    <select id="payOrders" resultType="integer">
+        select count(state) from orders where state like '已支付'
+    </select>
+    <!-- 图表，订单总数 -->
+    <select id="ordersAll" resultType="integer">
+        select count(id) from orders
+    </select>
+
+
+
+    <!-- 更新订单 -->
+    <update id="updateState">
+        update orders set state = #{state}, paytime = #{paytime},
+                          pay_no = #{payNo} where id = #{id}
+    </update>
+
+    <!-- 修改 是否线下取货 -->
+    <update id="updateIsdownById">
+        update orders set isdown = #{isdown} where id = #{id}
+    </update>
+
+    <!-- 根据 Id查询订单信息 -->
+    <select id="selectOrdersById" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from orders
+        where
+        id = #{id,jdbcType=NUMERIC}
+    </select>
+
+
+</mapper>

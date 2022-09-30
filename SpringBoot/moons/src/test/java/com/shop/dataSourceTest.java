@@ -30,4 +30,16 @@ public class dataSourceTest {
         log.info("数据源类型：{}", dataSource.getClass());
     }
 
+
+    @Test
+    public void test1(){
+
+        String date = "2022-05-28 07:53:20";
+        //String substring(int beginIndex, int endIndex) ：返回一个新字符串，它是此字符串从beginIndex开始截取到endIndex(不包含)的一个子字符串。
+        System.out.println(date.substring(10, 15));
+        System.out.println(date.substring(9, 15));
+        System.out.println(date.substring(11, 16));
+
+    }
+
 }

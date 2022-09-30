@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.jju.it.mapper.CollegeMapper">
+
+	<!-- 定义getAll方法要执行的sql -->
+	<select id="getAll" resultType="College">
+		select * from college
+	</select>
+
+
+	<select id="getById" resultType="College">
+		select * from college
+		where id = #{id}
+	</select>
+
+	<insert id="add">
+		insert into college(name) values( #{name} )
+	</insert>
+
+	<delete id="delete">
+		delete from college
+		where id = #{id}
+	</delete>
+
+</mapper>

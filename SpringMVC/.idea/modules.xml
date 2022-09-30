@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/request_Domain/request_Domain.iml" filepath="$PROJECT_DIR$/request_Domain/request_Domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/restFul/restFul.iml" filepath="$PROJECT_DIR$/restFul/restFul.iml" />
       <module fileurl="file://$PROJECT_DIR$/springMVC_Ann/springMVC_Ann.iml" filepath="$PROJECT_DIR$/springMVC_Ann/springMVC_Ann.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sw/sw.iml" filepath="$PROJECT_DIR$/sw/sw.iml" />
     </modules>
   </component>
 </project>

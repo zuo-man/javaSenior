@@ -42,6 +42,7 @@
         <module>cloud-seata-order-service4001</module>
         <module>cloud-seata-account-service4003</module>
         <module>cloud-seata-storage-service4002</module>
+        <module>docker_boot</module>
     </modules>
 
     <!-- pom：表示总父工程 -->

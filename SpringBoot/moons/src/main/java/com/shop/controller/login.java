@@ -5,6 +5,8 @@ import com.shop.entity.Result;
 import com.shop.pojo.User;
 import com.shop.pojo.Change;
 import com.shop.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.ui.Model;
@@ -20,6 +22,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.UUID;
 
+@Api(tags = "登录")
 @CrossOrigin
 @RestController
 @RequestMapping("/index")
@@ -30,27 +33,27 @@ public class login {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    //前端 传输用户名密码，生成token至redis数据库
+    @ApiOperation("前端 传输用户名密码，生成token至redis数据库")
     @PostMapping("/login")
     public Result login(@RequestParam String username, @RequestParam String password){
         //登录验证用户名密码
         User user = userService.loginByUsernameAndByPassword(username, password);
         if(user != null) {//登录成功
-            //随机生成 Token令牌至redis数据库，过期时间 30L：30分钟
+            //随机生成 Token令牌至redis数据库，过期时间 30L：10分钟
             String token = (user.getId()).toString() + UUID.randomUUID() + "";
             redisTemplate.opsForValue().set(token, (user.getId()).toString(), Duration.ofMinutes(30L));
 
 //            return new ReUtil().succToken(token, user);
            return new Result(200, token, null, "用户存在", true);
         }
-        return ReUtil.fail(user);
-//           return new Result(399, null, "失败", false);
+        return new Result(399, null, "用户名或密码错误", false);
     }
 
     /**
      *  验证 Token
      *  获取前端传输的 Token，查询token键所对应的 id值，再把user数据返回前端
      */
+    @ApiOperation("验证 Token")
     @GetMapping("/getUserinfo")
     public Result getUserinfo(@RequestParam String token){
 
@@ -70,6 +73,7 @@ public class login {
     /**
      * 前端注销账号，删除 Token
      */
+    @ApiOperation("注销")
     @PostMapping("/logout")
     public Result logout(@RequestBody HashMap<Object, String> map){
 
